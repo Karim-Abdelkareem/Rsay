@@ -103,10 +103,13 @@ export default function Home() {
           <h4 className="text-white text-xl">
             Knowledge | Skill | Quality | Impact
           </h4>
-          <TypewriterEffectSmooth words={words} />
+          <TypewriterEffectSmooth
+            words={words}
+            className="font-brush -rotate-3"
+          />
           <TextGenerateEffect
             words={subwords}
-            className="text-5xl text-white"
+            className="text-5xl text-white font-brush -rotate-2"
           />
           <TextGenerateEffect
             words={subwords2}
@@ -135,13 +138,15 @@ export default function Home() {
       </div>
 
       {/* Our Services Section */}
-      <div className="my-36 text-black container mx-auto w-full flex flex-col items-center justify-center">
+      <div className="my-32 text-black container mx-auto w-full flex flex-col items-center justify-center">
         <div ref={servicesRef} className="relative">
           <motion.div
             className="flex flex-col mx-auto items-center"
             {...motionSettingsServices}
           >
-            <h1 className="text-4xl font-bold">Our Services</h1>
+            <h1 className="text-5xl font-bold font-brush -rotate-3 mb-8">
+              Our Services
+            </h1>
             <p className="text-lg my-10 max-w-[680px] text-center">
               We provide professional training with internationally accredited
               certificates through courses aligned with market needs.
@@ -159,7 +164,7 @@ export default function Home() {
               <p className="line-clamp-3 my-2">{Service.details}</p>
               <Link
                 href={Service.href || ""}
-                className="font-semibold text-blue-700 group-hover:text-white"
+                className="font-brush font-semibold duration-150 text-blue-700 hover:border-b-4 border-white  group-hover:text-white"
               >
                 Learn More
               </Link>
@@ -175,7 +180,7 @@ export default function Home() {
           className="flex flex-col md:mx-20 w-1/2"
           {...motionSettingsWhoAreWe}
         >
-          <h1 className="text-5xl font-bold">Who Are We?</h1>
+          <h1 className="text-5xl font-bold font-brush">Who Are We?</h1>
           <div className="my-10">
             <p className="text-2xl max-w-[680px]">
               RSAY ITC offers professional training with internationally
@@ -187,7 +192,7 @@ export default function Home() {
           </div>
           <Link
             href={""}
-            className="font-semibold text-blue-700 flex gap-2 items-center w-fit hover:scale-110 duration-300"
+            className="font-brush -rotate-3 hover:border-b-4 border-blue-700 font-semibold text-blue-700 flex gap-2 items-center w-fit hover:scale-110 duration-300"
             aria-label="Learn more about who we are"
           >
             Learn More

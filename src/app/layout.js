@@ -1,25 +1,27 @@
-import localFont from "next/font/local";
+import { Permanent_Marker } from "next/font/google";
+import { Montserrat_Alternates } from "next/font/google";
 import { VT323 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import { ContactDialog } from "@/components/contactDialog/ContactDialog";
 import Footer from "@/components/footer/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
 const vt323 = VT323({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-vt323",
+});
+
+const permanentMarker = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-permanent-marker",
+});
+
+const montserratAlternates = Montserrat_Alternates({
+  weight: ["400", "600", "700"], // Choose the weights you need
+  subsets: ["latin"],
+  variable: "--font-montserrat-alternates", // Custom CSS variable for easier use
 });
 
 export const metadata = {
@@ -31,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${vt323.variable} antialiased`}
+        className={`${montserratAlternates.variable} ${vt323.variable} ${permanentMarker.variable} antialiased`}
       >
         <Header />
         {children}

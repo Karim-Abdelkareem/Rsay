@@ -6,7 +6,7 @@ export default function Header() {
   const pages = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contactus" },
   ];
 

@@ -9,7 +9,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ["var(--font-montserrat-alternates)", "sans-serif"],
         vt323: ["var(--font-vt323)", "monospace"],
+        brush: ["var(--font-permanent-marker)", "cursive"],
       },
       colors: {
         background: "hsl(var(--background))",
