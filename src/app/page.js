@@ -78,7 +78,12 @@ export default function Home() {
     transition: { delay: 0.6, duration: 0.6, ease: "easeOut" },
   };
 
-  const words = [{ text: "Rsaay", className: "text-blue-700" }];
+  const words = [
+    {
+      text: "Rsaay",
+      className: "text-blue-700 text-5xl md:text-7xl",
+    },
+  ];
   const subwords = "      Information Technology Company";
   const subwords2 =
     "          RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success.";
@@ -98,9 +103,9 @@ export default function Home() {
       </div>
 
       {/* Header Section */}
-      <div className="py-40 text-white container mx-auto w-full flex">
-        <div className="md:w-1/2">
-          <h4 className="text-white text-xl">
+      <div className="px-6 lg:px-0 py-40 text-white lg:container lg:mx-auto w-full flex flex-col lg:flex-row">
+        <div className="lg:w-1/2">
+          <h4 className="text-white text-sm md:text-lg lg:text-xl">
             Knowledge | Skill | Quality | Impact
           </h4>
           <TypewriterEffectSmooth
@@ -109,11 +114,11 @@ export default function Home() {
           />
           <TextGenerateEffect
             words={subwords}
-            className="text-5xl text-white font-brush -rotate-2"
+            className="text-2xl md:text-5xl text-white font-brush -rotate-2"
           />
           <TextGenerateEffect
             words={subwords2}
-            className="text-xl text-white"
+            className="text-base md:text-xl text-white"
           />
           <motion.div
             className="flex mt-8 gap-8"
@@ -122,13 +127,13 @@ export default function Home() {
             transition={{ delay: 8, duration: 0.5, ease: "easeOut" }}
           >
             <button
-              className="bg-transparent hover:bg-white text-white hover:text-blue-500 font-bold px-6 py-3 border rounded-sm"
+              className="text-sm md:text-base bg-transparent hover:bg-white text-white hover:text-blue-500 font-bold px-3 md:px-6 py-3 border rounded-sm"
               aria-label="Start Now"
             >
               Start Now
             </button>
             <button
-              className="bg-blue-700 hover:bg-white text-white hover:text-blue-500 font-bold px-6 py-3 hover:border rounded-sm"
+              className="text-sm md:text-base bg-blue-700 hover:bg-white text-white hover:text-blue-500 font-bold px-3 md:px-6 py-3 hover:border rounded-sm"
               aria-label="Learn More"
             >
               Learn More
@@ -138,13 +143,13 @@ export default function Home() {
       </div>
 
       {/* Our Services Section */}
-      <div className="my-32 text-black container mx-auto w-full flex flex-col items-center justify-center">
+      <div className="px-6 lg:px-0 my-10 lg:my-32 text-black lg:container lg:mx-auto w-full flex flex-col items-center justify-center">
         <div ref={servicesRef} className="relative">
           <motion.div
             className="flex flex-col mx-auto items-center"
             {...motionSettingsServices}
           >
-            <h1 className="text-5xl font-bold font-brush -rotate-3 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold font-brush -rotate-3 mb-8">
               Our Services
             </h1>
             <p className="text-lg my-10 max-w-[680px] text-center">
@@ -174,15 +179,17 @@ export default function Home() {
       </div>
 
       {/* Who Are We Section */}
-      <div className="mt-36 py-16 text-black w-full flex items-start justify-between bg-gray-50 overflow-hidden">
+      <div className="mt-36 py-16 text-black w-full flex flex-col lg:flex-row items-start justify-between bg-gray-50 overflow-hidden">
         <motion.div
           ref={whoAreWeRef}
-          className="flex flex-col md:mx-20 w-1/2"
+          className="flex flex-col md:mx-20 lg:w-1/2 order-2 lg:order-1 text-center lg:text-start"
           {...motionSettingsWhoAreWe}
         >
-          <h1 className="text-5xl font-bold font-brush">Who Are We?</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-brush">
+            Who Are We?
+          </h1>
           <div className="my-10">
-            <p className="text-2xl max-w-[680px]">
+            <p className="text-lg md:text-2xl max-w-[680px]">
               RSAY ITC offers professional training with internationally
               accredited certificates through courses aligned with market needs.
               We provide flexible learning options, either online or in equipped
@@ -192,7 +199,7 @@ export default function Home() {
           </div>
           <Link
             href={""}
-            className="font-brush -rotate-3 hover:border-b-4 border-blue-700 font-semibold text-blue-700 flex gap-2 items-center w-fit hover:scale-110 duration-300"
+            className="font-brush mx-auto lg:mx-0 -rotate-3 hover:border-b-4 border-blue-700 font-semibold text-blue-700 flex gap-2 items-center w-fit hover:scale-110 duration-300"
             aria-label="Learn more about who we are"
           >
             Learn More
@@ -201,7 +208,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           ref={whoAreWeRef}
-          className="w-1/2"
+          className="lg:w-1/2 mx-auto order-1 lg:order-2"
           {...motionSettingsWhoAreWeImage}
         >
           <Image

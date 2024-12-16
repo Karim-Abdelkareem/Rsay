@@ -1,4 +1,5 @@
 "use client";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { React, useState, useEffect } from "react";
 
@@ -51,7 +52,7 @@ export default function Header() {
           </svg>
         </span>
       </div>
-      <div className="flex gap-4">
+      <div className="gap-4 hidden lg:flex">
         {pages.map((page, i) => (
           <div
             key={i}
@@ -66,6 +67,11 @@ export default function Header() {
             <div className="p-[2px] bg-blue-800 -translate-x-28 group-hover:translate-x-0 duration-500" />
           </div>
         ))}
+      </div>
+      <div className="flex lg:hidden">
+        <Menu
+          className={`size-8 ${scrolling ? "text-black" : "text-white "}`}
+        />
       </div>
     </div>
   );

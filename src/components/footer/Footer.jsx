@@ -15,8 +15,8 @@ export default function Footer() {
         /> */}
         <div className="absolute w-full h-full bg-black opacity-40 top-0 z-10 shadow-lg" />
         <div className="absolute bg-[#101112] top-0 z-20 px-10 pt-16 w-full">
-          <div className="flex">
-            <div className="w-1/2">
+          <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row">
+            <div className="lg:w-1/2">
               <div className="flex flex-col justify-start gap-4">
                 <div className="flex">
                   <h1 className="text-4xl font-bold text-blue-600">Rsay </h1>
@@ -61,8 +61,8 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="flex w-1/2">
-              <div className="flex flex-1 flex-col gap-8 items-start w-1/2">
+            <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:w-1/2">
+              <div className="flex flex-1 flex-col gap-4 lg:gap-8 items-start lg:w-1/2">
                 <h3 className="text-xl">Services</h3>
                 <div>
                   <ul className="flex flex-col gap-4 list-disc ml-4">
@@ -102,10 +102,10 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <div className="flex flex-1 flex-col gap-8 items-start w-60">
+                <div className="flex flex-1 flex-col gap-4 lg:gap-8 items-start w-60">
                   <h3 className="text-xl">Contact Us</h3>
                   <div>
-                    <ul className="flex flex-col gap-4 list-disc ml-4">
+                    <ul className="flex flex-col gap-2 lg:gap-4 list-disc ml-4">
                       <li>
                         <a
                           href="#"

@@ -7,7 +7,7 @@ import React from "react";
 export default function page() {
   return (
     <div className="min-h-[40rem] py-32 w-full bg-black relative flex flex-col items-center justify-center antialiased">
-      <div className="relative z-[2] w-1/2 rounded bg-black overflow-hidden">
+      <div className="relative z-[2] p-4 md:p-0 md:w-3/4 xl:w-1/2 rounded bg-black overflow-hidden">
         <div className="left-0 top-0 flex h-6 w-full items-center space-x-2 px-4 bg-[#464848]">
           <div className="h-3 w-3 rounded-full bg-[#FF5F57]" />
           <div className="h-3 w-3 rounded-full bg-[#FFBD2E]" />
