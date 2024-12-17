@@ -14,6 +14,11 @@ module.exports = {
         brush: ["var(--font-permanent-marker)", "cursive"],
       },
       colors: {
+        brand: {
+          DEFAULT: "#004aad",
+          light: "#4c8be7",
+          dark: "#003380",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

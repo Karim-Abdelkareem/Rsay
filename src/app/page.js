@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { MoveRight } from "lucide-react";
 import { ContactDialog } from "@/components/contactDialog/ContactDialog";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export default function Home() {
   // Separate states and refs for "Our Services" and "Who Are We" sections
@@ -78,10 +79,12 @@ export default function Home() {
     transition: { delay: 0.6, duration: 0.6, ease: "easeOut" },
   };
 
+  const flipWords = ["Knowledge", "Skills", "Quality", "Impact"];
+
   const words = [
     {
-      text: "Rsaay",
-      className: "text-blue-700 text-5xl md:text-7xl",
+      text: "Rsay",
+      className: "text-brand text-5xl md:text-7xl",
     },
   ];
   const subwords = "      Information Technology Company";
@@ -105,13 +108,17 @@ export default function Home() {
       {/* Header Section */}
       <div className="px-6 lg:px-0 py-40 text-white lg:container lg:mx-auto w-full flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
-          <h4 className="text-white text-sm md:text-lg lg:text-xl">
+          {/* <h4 className="text-white text-sm md:text-lg lg:text-xl">
             Knowledge | Skill | Quality | Impact
-          </h4>
-          <TypewriterEffectSmooth
-            words={words}
-            className="font-brush -rotate-3"
-          />
+            </h4> */}
+          <div className="flex gap-6 items-center">
+            <TypewriterEffectSmooth words={words} className="font-brush" />
+            <FlipWords
+              words={flipWords}
+              className="text-white text-sm md:text-lg lg:text-4xl font-bold"
+              duration={4000}
+            />
+          </div>
           <TextGenerateEffect
             words={subwords}
             className="text-2xl md:text-5xl text-white font-brush -rotate-2"
@@ -133,7 +140,7 @@ export default function Home() {
               Start Now
             </button>
             <button
-              className="text-sm md:text-base bg-blue-700 hover:bg-white text-white hover:text-blue-500 font-bold px-3 md:px-6 py-3 hover:border rounded-sm"
+              className="text-sm md:text-base bg-brand hover:bg-white text-white hover:text-blue-500 font-bold px-3 md:px-6 py-3 hover:border rounded-sm"
               aria-label="Learn More"
             >
               Learn More
@@ -169,7 +176,7 @@ export default function Home() {
               <p className="line-clamp-3 my-2">{Service.details}</p>
               <Link
                 href={Service.href || ""}
-                className="font-brush font-semibold duration-150 text-blue-700 hover:border-b-4 border-white  group-hover:text-white"
+                className="font-brush font-semibold duration-150 text-brand hover:border-b-4 border-white  group-hover:text-white"
               >
                 Learn More
               </Link>

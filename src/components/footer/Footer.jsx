@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row">
             <div className="lg:w-1/2">
               <div className="flex flex-col justify-start gap-4">
-                <div className="flex">
+                <div className="flex gap-4">
                   <h1 className="text-4xl font-bold text-blue-600">Rsay </h1>
                   <span className="p-1.5 rounded-full border border-blue-600">
                     <svg

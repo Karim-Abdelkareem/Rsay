@@ -1,14 +1,13 @@
 "use client";
-import { Menu } from "lucide-react";
 import Link from "next/link";
 import { React, useState, useEffect } from "react";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function Header() {
   const pages = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
     { name: "About Us", href: "/about" },
-    { name: "Contact Us", href: "/contactus" },
   ];
 
   const [scrolling, setScrolling] = useState(false);
@@ -36,14 +35,14 @@ export default function Header() {
       } fixed w-full top-0 left-0 z-50`}
     >
       <div className="flex items-center gap-2">
-        <h1 className="text-4xl font-bold text-blue-600">Rsay </h1>
-        <span className="p-1.5 rounded-full border border-blue-600">
+        <h1 className="text-4xl font-bold text-brand">Rsay </h1>
+        <span className="p-1.5 rounded-full border border-brand">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
             viewBox="0 0 20 20"
-            className="text-blue-600"
+            className="text-brand"
           >
             <path
               fill="currentColor"
@@ -52,7 +51,7 @@ export default function Header() {
           </svg>
         </span>
       </div>
-      <div className="gap-4 hidden lg:flex">
+      <div className="gap-4 hidden lg:flex items-baseline">
         {pages.map((page, i) => (
           <div
             key={i}
@@ -60,19 +59,100 @@ export default function Header() {
           >
             <Link
               href={page.href}
-              className=" text-blue-700 font-bold hover:text-blue-800"
+              className=" text-brand font-bold hover:text-blue-800"
             >
               {page.name}
             </Link>
             <div className="p-[2px] bg-blue-800 -translate-x-28 group-hover:translate-x-0 duration-500" />
           </div>
         ))}
+
+        <Menu as="div" className="relative inline-block text-left">
+          <div>
+            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent text-brand font-bold hover:text-blue-800">
+              Serivces
+              <ChevronDownIcon
+                aria-hidden="true"
+                className="-mr-1 size-5 text-brand font-bold hover:text-blue-800"
+              />
+            </MenuButton>
+          </div>
+
+          <MenuItems
+            transition
+            className="absolute right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+          >
+            <div className="py-1">
+              <MenuItem>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                >
+                  Account settings
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                >
+                  Support
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                >
+                  License
+                </a>
+              </MenuItem>
+            </div>
+          </MenuItems>
+        </Menu>
+
+        <Menu as="div" className="relative inline-block text-left">
+          <div>
+            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent text-brand font-bold hover:text-blue-800">
+              Contact Us
+              <ChevronDownIcon
+                aria-hidden="true"
+                className="-mr-1 size-5 text-brand font-bold hover:text-blue-800"
+              />
+            </MenuButton>
+          </div>
+
+          <MenuItems
+            transition
+            className="absolute right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+          >
+            <div className="py-1">
+              <MenuItem>
+                <Link
+                  href="/contact/companies"
+                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                >
+                  For Companies
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                >
+                  For Universities
+                </a>
+              </MenuItem>
+            </div>
+          </MenuItems>
+        </Menu>
       </div>
-      <div className="flex lg:hidden">
+
+      {/* <div className="flex lg:hidden">
         <Menu
           className={`size-8 ${scrolling ? "text-black" : "text-white "}`}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
