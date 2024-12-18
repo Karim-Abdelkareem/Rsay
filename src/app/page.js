@@ -10,8 +10,11 @@ import { MoveRight } from "lucide-react";
 import { ContactDialog } from "@/components/contactDialog/ContactDialog";
 import { FlipWords } from "@/components/ui/flip-words";
 import Loader from "@/components/loader/Loader";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
+
   // Separate states and refs for "Our Services" and "Who Are We" sections
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const [isWhoAreWeVisible, setIsWhoAreWeVisible] = useState(false);
@@ -138,7 +141,7 @@ export default function Home() {
               className="text-sm md:text-base bg-transparent hover:bg-white text-white hover:text-blue-500 font-bold px-3 md:px-6 py-3 border rounded-sm"
               aria-label="Start Now"
             >
-              Start Now
+              {t("start-now")}
             </button>
             <button
               className="text-sm md:text-base bg-brand hover:bg-white text-white hover:text-blue-500 font-bold px-3 md:px-6 py-3 hover:border rounded-sm"

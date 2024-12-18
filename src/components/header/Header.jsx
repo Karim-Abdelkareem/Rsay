@@ -5,6 +5,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Logo from "../logo/Logo";
 import { Globe } from "lucide-react";
+import setLanguageValue from "@/actions/set-language-action";
 
 export default function Header() {
   const pages = [
@@ -178,11 +179,40 @@ export default function Header() {
             </div>
           </MenuItems>
         </Menu>
-        <div
-          className={`${scrolling && "border-brand"} border p-2 cursor-pointer`}
-        >
-          <Globe className={`${scrolling ? "text-brand" : "text-white"}`} />
-        </div>
+        <Menu as="div">
+          <MenuButton
+            className={`${
+              scrolling && "border-brand"
+            } border p-2 cursor-pointer`}
+          >
+            <Globe className={`${scrolling ? "text-brand" : "text-white"}`} />
+          </MenuButton>
+          <MenuItems
+            transition
+            className="absolute overflow-hidden right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+          >
+            <div>
+              <MenuItem
+                onClick={() => {
+                  setLanguageValue("en");
+                }}
+              >
+                <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none">
+                  English
+                </div>
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  setLanguageValue("ar");
+                }}
+              >
+                <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none">
+                  Arabic
+                </div>
+              </MenuItem>
+            </div>
+          </MenuItems>
+        </Menu>
       </div>
 
       {/* <div className="flex lg:hidden">
