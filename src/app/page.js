@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import { MoveRight } from "lucide-react";
 import { ContactDialog } from "@/components/contactDialog/ContactDialog";
 import { FlipWords } from "@/components/ui/flip-words";
+import Loader from "@/components/loader/Loader";
 
 export default function Home() {
   // Separate states and refs for "Our Services" and "Who Are We" sections
@@ -95,18 +96,18 @@ export default function Home() {
     <>
       {/* Background Video */}
       <div className="absolute h-full -z-10">
-        <div className="absolute top-0 w-full h-screen bg-black/70"></div>
+        <div className="absolute top-0 w-full h-screen bg-black/70 "></div>
         <Image
           src="/Home/bg.jpg"
           width={1920}
           height={1080}
           alt="bg"
-          className="w-full h-screen object-cover"
+          className="w-full h-screen object-cover "
         />
       </div>
 
       {/* Header Section */}
-      <div className="px-6 lg:px-0 py-40 text-white lg:container lg:mx-auto w-full flex flex-col lg:flex-row">
+      <div className="px-6 lg:px-0 py-32 text-white lg:justify-around w-full flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
           {/* <h4 className="text-white text-sm md:text-lg lg:text-xl">
             Knowledge | Skill | Quality | Impact
@@ -147,10 +148,19 @@ export default function Home() {
             </button>
           </motion.div>
         </div>
+        <div className="hidden lg:flex items-center justify-center">
+          <Loader />
+        </div>
+        {/* <Image
+          src="/Contact/Animation.gif"
+          alt="animation"
+          width={400}
+          height={400}
+        /> */}
       </div>
 
       {/* Our Services Section */}
-      <div className="px-6 lg:px-0 my-10 lg:my-32 text-black lg:container lg:mx-auto w-full flex flex-col items-center justify-center">
+      <div className="px-6 lg:px-0 my-10 lg:my-24 text-black lg:container lg:mx-auto w-full flex flex-col items-center justify-center">
         <div ref={servicesRef} className="relative">
           <motion.div
             className="flex flex-col mx-auto items-center"

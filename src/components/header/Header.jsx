@@ -4,6 +4,7 @@ import { React, useState, useEffect } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Logo from "../logo/Logo";
+import { Globe } from "lucide-react";
 
 export default function Header() {
   const pages = [
@@ -36,7 +37,7 @@ export default function Header() {
       } fixed w-full top-0 left-0 z-50`}
     >
       <Logo scrolling={scrolling} />
-      <div className="gap-4 hidden lg:flex items-baseline">
+      <div className="gap-4 hidden lg:flex items-center">
         {pages.map((page, i) => (
           <div
             key={i}
@@ -61,7 +62,7 @@ export default function Header() {
         ))}
 
         <Menu as="div" className="relative inline-block text-left">
-          <div>
+          <div className="group overflow-hidden hover:-translate-y-1 duration-300">
             <MenuButton
               className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent ${
                 scrolling
@@ -79,35 +80,48 @@ export default function Header() {
                 } font-bold `}
               />
             </MenuButton>
+            <div
+              className={`p-[2px] ${
+                scrolling ? "bg-blue-800" : "bg-white"
+              } -translate-x-28 group-hover:translate-x-0 duration-500`}
+            />
           </div>
 
           <MenuItems
             transition
-            className="absolute right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+            className="absolute overflow-hidden right-0 z-10 mt-7 w-96 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
           >
-            <div className="py-1">
+            <div>
               <MenuItem>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
                 >
-                  Account settings
+                  Website Development
                 </a>
               </MenuItem>
               <MenuItem>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
                 >
-                  Support
+                  Mobile Applicatoion Development (Android & IOS)
                 </a>
               </MenuItem>
               <MenuItem>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
                 >
-                  License
+                  Rsay Integrated Learning Managment System (LMS)
+                </a>
+              </MenuItem>
+              <MenuItem>
+                <a
+                  href="#"
+                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
+                >
+                  RSAY&apos;s Traning Courses
                 </a>
               </MenuItem>
             </div>
@@ -115,7 +129,7 @@ export default function Header() {
         </Menu>
 
         <Menu as="div" className="relative inline-block text-left">
-          <div>
+          <div className="group overflow-hidden hover:-translate-y-1 duration-300">
             <MenuButton
               className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent ${
                 scrolling
@@ -133,25 +147,30 @@ export default function Header() {
                 }`}
               />
             </MenuButton>
+            <div
+              className={`p-[2px] ${
+                scrolling ? "bg-blue-800" : "bg-white"
+              } -translate-x-28 group-hover:translate-x-0 duration-500`}
+            />
           </div>
 
           <MenuItems
             transition
-            className="absolute right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+            className="absolute overflow-hidden right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
           >
-            <div className="py-1">
+            <div>
               <MenuItem>
                 <Link
                   href="/contact/companies"
-                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                  className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
                 >
                   For Companies
                 </Link>
               </MenuItem>
               <MenuItem>
                 <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                  href="/contact/universities"
+                  className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
                 >
                   For Universities
                 </a>
@@ -159,6 +178,11 @@ export default function Header() {
             </div>
           </MenuItems>
         </Menu>
+        <div
+          className={`${scrolling && "border-brand"} border p-2 cursor-pointer`}
+        >
+          <Globe className={`${scrolling ? "text-brand" : "text-white"}`} />
+        </div>
       </div>
 
       {/* <div className="flex lg:hidden">
