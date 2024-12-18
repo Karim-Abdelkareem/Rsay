@@ -3,6 +3,7 @@ import Link from "next/link";
 import { React, useState, useEffect } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Logo from "../logo/Logo";
 
 export default function Header() {
   const pages = [
@@ -34,23 +35,7 @@ export default function Header() {
         scrolling ? "bg-white shadow-lg" : "bg-transparent"
       } fixed w-full top-0 left-0 z-50`}
     >
-      <div className="flex items-center gap-2">
-        <h1 className="text-4xl font-bold text-brand">Rsay </h1>
-        <span className="p-1.5 rounded-full border border-brand">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 20 20"
-            className="text-brand"
-          >
-            <path
-              fill="currentColor"
-              d="M10 2a5 5 0 0 0-5 5v2a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H7V7a3 3 0 0 1 5.906-.75a1 1 0 0 0 1.936-.5A5 5 0 0 0 10 2"
-            ></path>
-          </svg>
-        </span>
-      </div>
+      <Logo scrolling={scrolling} />
       <div className="gap-4 hidden lg:flex items-baseline">
         {pages.map((page, i) => (
           <div
@@ -59,21 +44,39 @@ export default function Header() {
           >
             <Link
               href={page.href}
-              className=" text-brand font-bold hover:text-blue-800"
+              className={`${
+                scrolling
+                  ? "text-brand font-bold hover:text-blue-800"
+                  : "text-white"
+              }`}
             >
               {page.name}
             </Link>
-            <div className="p-[2px] bg-blue-800 -translate-x-28 group-hover:translate-x-0 duration-500" />
+            <div
+              className={`p-[2px] ${
+                scrolling ? "bg-blue-800" : "bg-white"
+              } -translate-x-28 group-hover:translate-x-0 duration-500`}
+            />
           </div>
         ))}
 
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent text-brand font-bold hover:text-blue-800">
+            <MenuButton
+              className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent ${
+                scrolling
+                  ? "text-brand hover:text-blue-800 font-bold"
+                  : "text-white hover:text-gray-50 font-medium"
+              }  `}
+            >
               Serivces
               <ChevronDownIcon
                 aria-hidden="true"
-                className="-mr-1 size-5 text-brand font-bold hover:text-blue-800"
+                className={`-mr-1 size-5 ${
+                  scrolling
+                    ? "text-brand hover:text-blue-800"
+                    : "text-white hover:text-gray-50"
+                } font-bold `}
               />
             </MenuButton>
           </div>
@@ -113,11 +116,21 @@ export default function Header() {
 
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent text-brand font-bold hover:text-blue-800">
+            <MenuButton
+              className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent ${
+                scrolling
+                  ? "text-brand hover:text-blue-800 font-bold"
+                  : "text-white hover:text-gray-50 font-medium"
+              }`}
+            >
               Contact Us
               <ChevronDownIcon
                 aria-hidden="true"
-                className="-mr-1 size-5 text-brand font-bold hover:text-blue-800"
+                className={`-mr-1 size-5 ${
+                  scrolling
+                    ? "text-brand hover:text-blue-800 font-bold"
+                    : "text-white hover:text-gray-50 font-medium"
+                }`}
               />
             </MenuButton>
           </div>

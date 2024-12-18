@@ -65,6 +65,25 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        "show-hide-span": {
+          "0%": { opacity: "0", transform: "translateX(-100px)" },
+          "10%": { opacity: "1", transform: "translateX(0)" },
+          "70%": { opacity: "1", transform: "translateX(0)" },
+          "80%": { opacity: "0", transform: "translateX(-100px)" },
+          "100%": { opacity: "0", transform: "translateX(-100px)" },
+        },
+      },
+      animation: {
+        "show-hide-span": "show-hide-span 12s ease-in-out infinite",
+      },
+      transitionDelay: {
+        0: "0ms",
+        200: "200ms",
+        400: "400ms",
+        600: "600ms",
+        800: "800ms",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

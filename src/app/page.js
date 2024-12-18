@@ -71,20 +71,20 @@ export default function Home() {
   const motionSettingsWhoAreWe = {
     initial: { opacity: 0, x: -30 },
     animate: isWhoAreWeVisible ? { opacity: 1, x: 0 } : { opacity: 0 },
-    transition: { delay: 0.6, duration: 0.6, ease: "easeOut" },
+    transition: { delay: 0.4, duration: 0.6, ease: "easeOut" },
   };
   const motionSettingsWhoAreWeImage = {
     initial: { opacity: 0, x: 30 },
     animate: isWhoAreWeVisible ? { opacity: 1, x: 0 } : { opacity: 0 },
-    transition: { delay: 0.6, duration: 0.6, ease: "easeOut" },
+    transition: { delay: 0.4, duration: 0.6, ease: "easeOut" },
   };
 
   const flipWords = ["Knowledge", "Skills", "Quality", "Impact"];
 
   const words = [
     {
-      text: "Rsay",
-      className: "text-brand text-5xl md:text-7xl",
+      text: "RSAY",
+      className: "text-white text-5xl md:text-8xl",
     },
   ];
   const subwords = "      Information Technology Company";
@@ -111,13 +111,13 @@ export default function Home() {
           {/* <h4 className="text-white text-sm md:text-lg lg:text-xl">
             Knowledge | Skill | Quality | Impact
             </h4> */}
+          <FlipWords
+            words={flipWords}
+            className="text-white text-sm md:text-lg lg:text-4xl font-bold"
+            duration={4000}
+          />
           <div className="flex gap-6 items-center">
             <TypewriterEffectSmooth words={words} className="font-brush" />
-            <FlipWords
-              words={flipWords}
-              className="text-white text-sm md:text-lg lg:text-4xl font-bold"
-              duration={4000}
-            />
           </div>
           <TextGenerateEffect
             words={subwords}
@@ -169,17 +169,20 @@ export default function Home() {
           {services.map((Service, i) => (
             <div
               key={i}
-              className="bg-white rounded-md shadow-md border p-4 hover:shadow-[10px 10px 10px rgba(0)] hover:-translate-x-2 hover:-translate-y-2 hover:bg-blue-700 hover:text-white duration-500 group"
+              className="bg-white rounded-md shadow-md border p-6 hover:shadow-[10px 10px 10px rgba(0)] hover:-translate-x-2 hover:-translate-y-2 hover:bg-blue-700 hover:text-white duration-500 group"
             >
               <Image src={Service.icon} alt="icon" width={50} height={100} />
               <h3 className="text-xl font-bold h-20 my-2">{Service.title}</h3>
               <p className="line-clamp-3 my-2">{Service.details}</p>
-              <Link
-                href={Service.href || ""}
-                className="font-brush font-semibold duration-150 text-brand hover:border-b-4 border-white  group-hover:text-white"
-              >
-                Learn More
-              </Link>
+              <div className="-rotate-3 mb-4">
+                <Link
+                  href={Service.href || ""}
+                  className="flex items-center gap-2 w-fit font-brush font-semibold duration-150 text-brand hover:border-b-4 border-white  group-hover:text-white"
+                >
+                  Learn More
+                  <MoveRight className="size-5" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
