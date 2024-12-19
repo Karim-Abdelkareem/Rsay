@@ -47,7 +47,7 @@ employees acquire the skills needed to adapt to new challenges.`,
   },
 ];
 
-export default function page() {
+export default function Page() {
   const [isPartneringVisible, setIsPartneringVisible] = useState(false);
   const [isCollaboratingVisible, setIsCollaboratingVisible] = useState(false);
 

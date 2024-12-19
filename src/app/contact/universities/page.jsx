@@ -40,7 +40,7 @@ experience and enhancing their future employment prospects.`,
   },
 ];
 
-export default function page() {
+export default function Page() {
   const [isPartneringVisible, setIsPartneringVisible] = useState(false);
   const [isCollaboratingVisible, setIsCollaboratingVisible] = useState(false);
 
