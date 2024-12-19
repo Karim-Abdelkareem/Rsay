@@ -4,16 +4,21 @@ import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { delay, motion } from "framer-motion";
 import Image from "next/image";
 import services from "../data/services";
+import servicesAr from "../data/servicesAr";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { MoveRight } from "lucide-react";
+import { MoveLeft, MoveRight } from "lucide-react";
 import { ContactDialog } from "@/components/contactDialog/ContactDialog";
 import { FlipWords } from "@/components/ui/flip-words";
 import Loader from "@/components/loader/Loader";
 import { useTranslations } from "next-intl";
+import Cookies from "js-cookie";
 
 export default function Home() {
+  const locale = Cookies.get("locale");
   const t = useTranslations("HomePage");
+
+  const servicesToDisplay = locale === "en" ? services : servicesAr;
 
   // Separate states and refs for "Our Services" and "Who Are We" sections
   const [isServicesVisible, setIsServicesVisible] = useState(false);
@@ -83,17 +88,21 @@ export default function Home() {
     transition: { delay: 0.4, duration: 0.6, ease: "easeOut" },
   };
 
-  const flipWords = ["Knowledge", "Skills", "Quality", "Impact"];
+  const flipWords = [
+    t("filpwords.0"),
+    t("filpwords.1"),
+    t("filpwords.2"),
+    t("filpwords.3"),
+  ];
 
   const words = [
     {
-      text: "RSAY",
+      text: t("title"),
       className: "text-white text-5xl md:text-8xl",
     },
   ];
-  const subwords = "      Information Technology Company";
-  const subwords2 =
-    "          RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success.";
+  const subwords = `      ${t("subtitle")}`;
+  const subwords2 = `          ${t("description")}`;
 
   return (
     <>
@@ -110,16 +119,19 @@ export default function Home() {
       </div>
 
       {/* Header Section */}
-      <div className="px-6 lg:px-0 py-32 text-white lg:justify-around w-full flex flex-col lg:flex-row">
+      <div className="px-6 lg:px-0 py-32 text-white lg:justify-around w-full flex flex-col lg:flex-row h-screen">
         <div className="lg:w-1/2">
-          {/* <h4 className="text-white text-sm md:text-lg lg:text-xl">
-            Knowledge | Skill | Quality | Impact
-            </h4> */}
-          <FlipWords
+          <h4 className="text-white text-sm md:text-lg lg:text-xl">
+            {`${t("filpwords.0")} | ${t("filpwords.1")} | ${t(
+              "filpwords.2"
+            )} | ${t("filpwords.3")}`}
+          </h4>
+
+          {/* <FlipWords
             words={flipWords}
             className="text-white text-sm md:text-lg lg:text-4xl font-bold"
             duration={4000}
-          />
+          /> */}
           <div className="flex gap-6 items-center">
             <TypewriterEffectSmooth words={words} className="font-brush" />
           </div>
@@ -147,7 +159,7 @@ export default function Home() {
               className="text-sm md:text-base bg-brand hover:bg-white text-white hover:text-blue-500 font-bold px-3 md:px-6 py-3 hover:border rounded-sm"
               aria-label="Learn More"
             >
-              Learn More
+              {t("learn-more")}
             </button>
           </motion.div>
         </div>
@@ -169,17 +181,24 @@ export default function Home() {
             className="flex flex-col mx-auto items-center"
             {...motionSettingsServices}
           >
-            <h1 className="text-4xl md:text-5xl font-bold font-brush -rotate-3 mb-8">
-              Our Services
+            <h1
+              className={`text-4xl font-bold font-brush ${
+                locale == "en" ? "-rotate-3 md:text-5xl" : "md:text-7xl"
+              } mb-8`}
+            >
+              {t("our-services")}
             </h1>
-            <p className="text-lg my-10 max-w-[680px] text-center">
-              We provide professional training with internationally accredited
-              certificates through courses aligned with market needs.
+            <p
+              className={`${
+                locale == "en" ? "text-lg" : "text-3xl font-medium"
+              } my-10 max-w-[680px] text-center`}
+            >
+              {t("our-services-description")}
             </p>
           </motion.div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center">
-          {services.map((Service, i) => (
+          {servicesToDisplay.map((Service, i) => (
             <div
               key={i}
               className="bg-white rounded-md shadow-md border p-6 hover:shadow-[10px 10px 10px rgba(0)] hover:-translate-x-2 hover:-translate-y-2 hover:bg-blue-700 hover:text-white duration-500 group"
@@ -187,13 +206,17 @@ export default function Home() {
               <Image src={Service.icon} alt="icon" width={50} height={100} />
               <h3 className="text-xl font-bold h-20 my-2">{Service.title}</h3>
               <p className="line-clamp-3 my-2">{Service.details}</p>
-              <div className="-rotate-3 mb-4">
+              <div className={`${locale == "en" && "-rotate-3"} mb-4`}>
                 <Link
                   href={Service.href || ""}
-                  className="flex items-center gap-2 w-fit font-brush font-semibold duration-150 text-brand hover:border-b-4 border-white  group-hover:text-white"
+                  className={`flex items-center gap-2 w-fit font-brush font-semibold duration-150 text-brand hover:border-b-4 border-white  group-hover:text-white`}
                 >
-                  Learn More
-                  <MoveRight className="size-5" />
+                  {t("learn-more")}
+                  {locale === "ar" ? (
+                    <MoveLeft className={`size-5`} />
+                  ) : (
+                    <MoveRight className={`size-5`} />
+                  )}
                 </Link>
               </div>
             </div>
@@ -209,24 +232,26 @@ export default function Home() {
           {...motionSettingsWhoAreWe}
         >
           <h1 className="text-4xl md:text-5xl font-bold font-brush">
-            Who Are We?
+            {t("who-we-are")}
           </h1>
           <div className="my-10">
             <p className="text-lg md:text-2xl max-w-[680px]">
-              RSAY ITC offers professional training with internationally
-              accredited certificates through courses aligned with market needs.
-              We provide flexible learning options, either online or in equipped
-              classrooms, with interactive content and practical training to
-              ensure easy success.
+              {t("who-we-are-description")}
             </p>
           </div>
           <Link
             href={""}
-            className="font-brush mx-auto lg:mx-0 -rotate-3 hover:border-b-4 border-blue-700 font-semibold text-blue-700 flex gap-2 items-center w-fit hover:scale-110 duration-300"
+            className={`font-brush mx-auto lg:mx-0 ${
+              locale == "en" && "-rotate-3"
+            } hover:border-b-4 border-blue-700 font-semibold text-blue-700 flex gap-2 items-center w-fit hover:scale-110 duration-300`}
             aria-label="Learn more about who we are"
           >
-            Learn More
-            <MoveRight />
+            {t("learn-more")}
+            {locale === "ar" ? (
+              <MoveLeft className={`size-5`} />
+            ) : (
+              <MoveRight className={`size-5`} />
+            )}
           </Link>
         </motion.div>
         <motion.div

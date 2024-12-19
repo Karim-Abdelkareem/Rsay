@@ -1,6 +1,43 @@
 {
+  "Header": {
+    "pages": [
+      { "name": "Home", "href": "/" },
+      { "name": "About Us", "href": "/about" }
+    ],
+    "services": "Services",
+    "servicesObj": [
+      { "name": "Website Development", "href": "/" },
+      {
+        "name": "Mobile Applicatoion Development (Android & IOS)",
+        "href": "/"
+      },
+      {
+        "name": "Rsay Integrated Learning Managment System (LMS)",
+        "href": "/"
+      },
+      { "name": "RSAY&apos;s Traning Courses", "href": "/" }
+    ],
+    "contact": "Contact Us",
+    "contactObj": [
+      { "name": "For Companies", "href": "/contact/companies" },
+      {
+        "name": "For Universities",
+        "href": "/contact/universities"
+      }
+    ],
+    "english": "English",
+    "arabic": "Arabic"
+  },
   "HomePage": {
-    "title": "Hello world!",
-    "start-now": "Start Now"
+    "title": "RSAY",
+    "filpwords": ["Knowledge", "Skills", "Quality", "Impact"],
+    "subtitle": "Information Technology Company",
+    "description": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success.",
+    "start-now": "Start Now",
+    "learn-more": "Learn More",
+    "our-services": "Our Services",
+    "our-services-description": "We provide professional training with internationally accredited certificates through courses aligned with market needs",
+    "who-we-are": "Who We Are?",
+    "who-we-are-description": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success."
   }
 }

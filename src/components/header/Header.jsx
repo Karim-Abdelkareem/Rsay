@@ -4,13 +4,38 @@ import { React, useState, useEffect } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Logo from "../logo/Logo";
-import { Globe } from "lucide-react";
+import { AlignJustify, Contact, Globe } from "lucide-react";
 import setLanguageValue from "@/actions/set-language-action";
+import Sidebar from "../sidebar/Sidebar";
+import { useTranslations } from "next-intl";
+import Cookies from "js-cookie";
 
 export default function Header() {
+  const t = useTranslations("Header");
+
+  const locale = Cookies.get("locale");
+
   const pages = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
+    { name: t("pages.0.name"), href: "/" },
+    { name: t("pages.1.name"), href: "/about" },
+  ];
+
+  const services = [
+    { name: t("servicesObj.0.name"), href: "/" },
+    { name: t("servicesObj.1.name"), href: "/" },
+    { name: t("servicesObj.2.name"), href: "/" },
+    { name: t("servicesObj.3.name"), href: "/" },
+  ];
+
+  const contact = [
+    {
+      name: t("contactObj.0.name"),
+      href: "/contact/companies",
+    },
+    {
+      name: t("contactObj.1.name"),
+      href: "/contact/universities",
+    },
   ];
 
   const [scrolling, setScrolling] = useState(false);
@@ -71,7 +96,7 @@ export default function Header() {
                   : "text-white hover:text-gray-50 font-medium"
               }  `}
             >
-              Serivces
+              {t("services")}
               <ChevronDownIcon
                 aria-hidden="true"
                 className={`-mr-1 size-5 ${
@@ -90,41 +115,25 @@ export default function Header() {
 
           <MenuItems
             transition
-            className="absolute overflow-hidden right-0 z-10 mt-7 w-96 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+            className={`absolute overflow-hidden ${
+              locale === "en" ? "right-0" : "left-0"
+            } z-10 mt-7 w-96 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in`}
           >
             <div>
-              <MenuItem>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
-                >
-                  Website Development
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
-                >
-                  Mobile Applicatoion Development (Android & IOS)
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
-                >
-                  Rsay Integrated Learning Managment System (LMS)
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
-                >
-                  RSAY&apos;s Traning Courses
-                </a>
-              </MenuItem>
+              {services.map((service) => {
+                return (
+                  <MenuItem key={service.name}>
+                    <Link
+                      href={service.href}
+                      className={`${
+                        locale === "en" ? "text-left" : "text-right"
+                      } block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none`}
+                    >
+                      {service.name}
+                    </Link>
+                  </MenuItem>
+                );
+              })}
             </div>
           </MenuItems>
         </Menu>
@@ -138,7 +147,7 @@ export default function Header() {
                   : "text-white hover:text-gray-50 font-medium"
               }`}
             >
-              Contact Us
+              {t("contact")}
               <ChevronDownIcon
                 aria-hidden="true"
                 className={`-mr-1 size-5 ${
@@ -157,26 +166,24 @@ export default function Header() {
 
           <MenuItems
             transition
-            className="absolute overflow-hidden right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+            className={`absolute overflow-hidden ${
+              locale === "en" ? "right-0" : "left-0"
+            } z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in`}
           >
-            <div>
-              <MenuItem>
-                <Link
-                  href="/contact/companies"
-                  className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
-                >
-                  For Companies
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  href="/contact/universities"
-                  className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none"
-                >
-                  For Universities
-                </a>
-              </MenuItem>
-            </div>
+            {contact.map((contact) => {
+              return (
+                <MenuItem key={contact.name}>
+                  <Link
+                    href={contact.href}
+                    className={`${
+                      locale === "en" ? "text-left" : "text-right"
+                    } block px-4 py-3 text-base font-bold text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none`}
+                  >
+                    {contact.name}
+                  </Link>
+                </MenuItem>
+              );
+            })}
           </MenuItems>
         </Menu>
         <Menu as="div">
@@ -189,7 +196,9 @@ export default function Header() {
           </MenuButton>
           <MenuItems
             transition
-            className="absolute overflow-hidden right-0 z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+            className={`absolute overflow-hidden ${
+              locale === "en" ? "right-0" : "left-0"
+            } z-10 mt-7 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in`}
           >
             <div>
               <MenuItem
@@ -197,8 +206,8 @@ export default function Header() {
                   setLanguageValue("en");
                 }}
               >
-                <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none">
-                  English
+                <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none hover:cursor-pointer">
+                  {t("english")}
                 </div>
               </MenuItem>
               <MenuItem
@@ -206,8 +215,8 @@ export default function Header() {
                   setLanguageValue("ar");
                 }}
               >
-                <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none">
-                  Arabic
+                <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none hover:cursor-pointer">
+                  {t("arabic")}
                 </div>
               </MenuItem>
             </div>
@@ -215,11 +224,9 @@ export default function Header() {
         </Menu>
       </div>
 
-      {/* <div className="flex lg:hidden">
-        <Menu
-          className={`size-8 ${scrolling ? "text-black" : "text-white "}`}
-        />
-      </div> */}
+      <div className="flex lg:hidden">
+        <Sidebar scrolling={scrolling} />
+      </div>
     </div>
   );
 }

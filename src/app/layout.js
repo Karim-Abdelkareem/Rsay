@@ -7,6 +7,7 @@ import { ContactDialog } from "@/components/contactDialog/ContactDialog";
 import Footer from "@/components/footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { cookies } from "next/headers";
 
 const vt323 = VT323({
   weight: "400",
@@ -32,7 +33,6 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const locale = await getLocale();
-
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
@@ -40,6 +40,9 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body
         className={` ${orkney.variable} ${vt323.variable} ${permanentMarker.variable} antialiased`}
+        style={{
+          direction: cookies().get("locale")?.value === "ar" ? "rtl" : "ltr",
+        }}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
