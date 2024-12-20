@@ -106,7 +106,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Background Video */}
+      {/* Background Image */}
       <div className="absolute h-full -z-10">
         <div className="absolute top-0 w-full h-screen bg-black/70 "></div>
         <Image
@@ -241,16 +241,16 @@ export default function Home() {
           </div>
           <Link
             href={""}
-            className={`font-brush mx-auto lg:mx-0 ${
+            className={`font-brush mx-auto lg:mx-0 group ${
               locale == "en" && "-rotate-3"
             } hover:border-b-4 border-blue-700 font-semibold text-blue-700 flex gap-2 items-center w-fit hover:scale-110 duration-300`}
             aria-label="Learn more about who we are"
           >
             {t("learn-more")}
             {locale === "ar" ? (
-              <MoveLeft className={`size-5`} />
+              <MoveLeft className={`size-5 group-hover:mr-1`} />
             ) : (
-              <MoveRight className={`size-5`} />
+              <MoveRight className={`size-5 group-hover:ml-1`} />
             )}
           </Link>
         </motion.div>

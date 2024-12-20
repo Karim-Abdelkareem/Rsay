@@ -4,6 +4,11 @@ import { Mail, MapPin, PhoneCall, Send } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { delay, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import Cookies from "js-cookie";
+import companies from "@/data/contact-companies";
+import companiesAr from "@/data/contact-companiesAr";
+import ContactForm from "@/components/contactForm/ContactForm";
 
 const projects = [
   {
@@ -48,6 +53,9 @@ employees acquire the skills needed to adapt to new challenges.`,
 ];
 
 export default function Page() {
+  const t = useTranslations("contact");
+  const locale = Cookies.get("locale");
+  const dataToDisplay = locale === "en" ? companies : companiesAr;
   const [isPartneringVisible, setIsPartneringVisible] = useState(false);
   const [isCollaboratingVisible, setIsCollaboratingVisible] = useState(false);
 
@@ -126,30 +134,29 @@ export default function Page() {
           className="w-full h-[40rem] object-cover"
         />
       </div>
-      <div className="py-40">
+      <div className="h-[80vh] py-40">
         <h1 className="text-white text-center font-brush text-4xl md:text-5xl lg:text-6xl font-extrabold">
-          Contact Us
+          {t("contact-us")}
         </h1>
         <h2 className="text-white text-center mx-4 lg:mx-0 font-brush text-xl md:text-2xl lg:text-4xl font-bold my-10">
-          Invitation for Partnership with Companies in Training
+          {t("partnering")}
         </h2>
         <p className="md:text-lg lg:text-2xl text-white text-center w-[80%] lg:w-[60%] mx-auto">
-          Rasay expresses its desire to establish strategic partnerships with
-          companies across various sectors to deliver specialized training
-          programs aimed at enhancing the skills and competencies necessary to
-          meet market challenges. We believe in the importance of collaboration
-          with companies to achieve common goals in workforce development and
-          improve institutional performance.
+          {t("partnering-description")}
         </p>
       </div>
-      <div className="my-10" ref={partneringRef}>
+      <div className="my-20" ref={partneringRef}>
         <motion.div {...motionSettingsPartnering}>
-          <h2 className="text-3xl md:text-5xl font-bold font-brush text-center -rotate-3 mb-8 md:w-[50%] mx-auto">
-            Importance of Partnering with Rasay:
+          <h2
+            className={`text-3xl md:text-5xl font-bold font-brush text-center ${
+              locale === "en" ? "-rotate-3" : ""
+            }  mb-8 md:w-[50%] mx-auto`}
+          >
+            {t("importance")}
           </h2>
           <div className="my-10">
             <div className="max-w-7xl mx-auto px-8">
-              <HoverEffect items={projects} />
+              <HoverEffect items={dataToDisplay} />
             </div>
           </div>
         </motion.div>
@@ -160,14 +167,10 @@ export default function Page() {
           <div className="w-full  md:max-w-[50%] px-4 md:ml-12 lg:ml-16 order-2 md:order-1">
             <motion.div {...motionSettingsCollaborating}>
               <h3 className="text-xl lg:text-3xl font-semibold">
-                We invite you to explore collaboration opportunities with us and
-                look forward to discussing how we can work together to achieve
-                your goals and enhance the efficiency of your workforce.
+                {t("invite")}
               </h3>
               <p className="my-6 text-lg lg:text-2xl">
-                If you represent a company and wish to learn more about our
-                partnership, please do not hesitate to contact us using the
-                information below.
+                {t("invite-description")}
               </p>
             </motion.div>
           </div>
@@ -185,123 +188,7 @@ export default function Page() {
       </div>
 
       {/* *************** */}
-      <div className="w-full items-start flex flex-col md:flex-row bg-gray-50 border-t-2">
-        <div className="flex-1 px-4 py-8 md:p-10 flex flex-col md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-black uppercase">
-            Let’s Talk <br /> We love to hear from You!
-          </h2>
-          <div className="my-16 hidden md:block">
-            <p className="font-bold">
-              Email, call or complete the form to get in touch with us!
-            </p>
-            <p className="my-2 text-gray-600 w-3/4">
-              We&apos;re here to assist you. Reach out via email, give us a
-              call, or fill out the form, and we&apos;ll respond promptly.
-            </p>
-            <div className="my-10">
-              <div className="flex items-center gap-4 my-6">
-                <Mail className="size-7" />
-                <p className="hover:text-blue-500 hover:translate-x-2 duration-200 cursor-pointer">
-                  info@rsaay.com
-                </p>
-              </div>
-              <div className="flex items-center gap-4 my-6">
-                <PhoneCall className="size-7" />
-                <p className="hover:text-blue-500 hover:translate-x-2 duration-200 cursor-pointer">
-                  +966549851842
-                </p>
-              </div>
-              <div className="flex items-center gap-4 my-6">
-                <PhoneCall className="size-7" />
-                <p className="hover:text-blue-500 hover:translate-x-2 duration-200 cursor-pointer">
-                  +966549851842
-                </p>
-              </div>
-              <div className="flex items-center gap-4 my-6">
-                <MapPin className="size-6" />
-                <p className="max-w-[40%]">
-                  Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <form className="bg-white shadow-xl w-full md:w-1/2 p-4 flex flex-col justify-center md:p-6">
-          {/* name */}
-          <div className="flex flex-col">
-            <label htmlFor="">Name</label>
-            <input
-              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
-              name="name"
-              placeholder="enter name"
-              type="text"
-              required
-            />
-          </div>
-          {/*  email */}
-          <div className="flex flex-col">
-            <label htmlFor="">Email</label>
-            <input
-              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
-              placeholder="enter email"
-              type="email"
-              name="email"
-              required
-            />
-          </div>
-          {/*  phone */}
-          <div className="flex flex-col">
-            <label htmlFor="">Phone</label>
-            <input
-              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
-              placeholder="phone number"
-              type="text"
-              name="phone"
-              required
-            />
-          </div>
-          {/* site */}
-          <div className="flex flex-col">
-            <label htmlFor="">Site</label>
-            <input
-              name="site"
-              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
-              placeholder="Site"
-              type="text"
-              required
-            />
-          </div>
-          {/* role */}
-          <div className="flex flex-col">
-            <label htmlFor="">Role</label>
-            <input
-              name="role"
-              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
-              placeholder="role"
-              type="text"
-              required
-            />
-          </div>
-          {/* message */}
-          <div className="flex flex-col">
-            <label htmlFor="">Message</label>
-            <textarea
-              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
-              placeholder="message"
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
-              required
-            ></textarea>
-          </div>
-          {/* submit */}
-          <button className="flex items-center gap-3 w-1/4 justify-center my-2 p-3  text-white bg-gradient-to-r from-primary to-blue-500 rounded-xl hover:bg-primary cursor-pointer hover:scale-105 duration-500">
-            Send
-            <Send />
-          </button>
-        </form>
-      </div>
+      <ContactForm />
     </>
   );
 }

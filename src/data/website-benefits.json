@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Attractive and User-friendly Design",
+    "description": [
+      "Organized and visually appealing interfaces that encourage visitors to engage and explore the site effortlessly."
+    ],
+    "icon": "/Services/user-experience.png"
+  },
+  {
+    "title": "Responsive Design for All Devices",
+    "description": [
+      "Websites are optimized to provide a seamless experience across all devices, including smartphones, tablets, and desktops."
+    ],
+    "icon": "/Services/responsive.png"
+  },
+  {
+    "title": "Full Customization",
+    "description": [
+      "We create websites tailored to your business needs, aligning with your brand identity."
+    ],
+    "icon": "/Services/settings.png"
+  },
+  {
+    "title": "High Performance and Fast Loading Speed",
+    "description": [
+      "Optimized performance ensures a smooth user experience and reduces bounce rates."
+    ],
+    "icon": "/Services/high-speed.png"
+  },
+  {
+    "title": "Multi-language Support",
+    "description": [
+      "We develop multilingual websites to meet the needs of diverse audiences."
+    ],
+    "icon": "/Services/language.png"
+  },
+  {
+    "title": "Integration with Other Services",
+    "description": [
+      "Seamless integration with payment gateways, social media platforms, and databases."
+    ],
+    "icon": "/Services/integration.png"
+  },
+  {
+    "title": "Easy Content Management",
+    "description": [
+      "User-friendly dashboards enable you to update content without technical expertise."
+    ],
+    "icon": "/Services/content.png"
+  },
+  {
+    "title": "Performance Analytics and Visitor Tracking",
+    "description": [
+      "Built-in analytics tools to monitor website performance and visitor behavior, helping you refine your marketing strategies."
+    ],
+    "icon": "/Services/dashboard.png"
+  }
+]

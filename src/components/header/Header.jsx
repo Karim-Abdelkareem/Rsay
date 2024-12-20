@@ -21,8 +21,8 @@ export default function Header() {
   ];
 
   const services = [
-    { name: t("servicesObj.0.name"), href: "/" },
-    { name: t("servicesObj.1.name"), href: "/" },
+    { name: t("servicesObj.0.name"), href: "/services/website-develpoment" },
+    { name: t("servicesObj.1.name"), href: "/services/website-develpoment" },
     { name: t("servicesObj.2.name"), href: "/" },
     { name: t("servicesObj.3.name"), href: "/" },
   ];

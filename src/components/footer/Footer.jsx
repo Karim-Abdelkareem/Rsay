@@ -1,8 +1,15 @@
+"use server";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { cookies } from "next/headers";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("footer");
+  const locale = cookies().get("locale").value;
+
   return (
     <div>
       <footer className="bg-black relative  text-white">
@@ -18,8 +25,13 @@ export default function Footer() {
           <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row">
             <div className="lg:w-1/2">
               <div className="flex flex-col justify-start gap-4">
-                <div className="flex gap-4">
-                  <h1 className="text-4xl font-bold text-blue-600">Rsay </h1>
+                <div
+                  className={`flex gap-4 items-center ${
+                    locale === "ar" ? "justify-end" : ""
+                  }`}
+                  dir="ltr"
+                >
+                  <h1 className="text-4xl font-bold text-blue-600">RSAY</h1>
                   <span className="p-1.5 rounded-full border border-blue-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -37,25 +49,41 @@ export default function Footer() {
                 </div>
                 <div className="flex gap-3">
                   <MapPin />
-                  <p>
-                    Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh
-                  </p>
+                  <p>{t("address")}</p>
                 </div>
                 <div className="flex gap-3">
                   <PhoneCall />
-                  <p className="hover:text-blue-400 hover:translate-x-2 duration-200 cursor-pointer">
+                  <p
+                    className={`hover:text-blue-400 ${
+                      locale === "en"
+                        ? "hover:translate-x-2"
+                        : "hover:-translate-x-2"
+                    }  duration-200 cursor-pointer`}
+                  >
                     +966549851842
                   </p>
                 </div>
                 <div className="flex gap-3">
                   <PhoneCall />
-                  <p className="hover:text-blue-400 hover:translate-x-2 duration-200 cursor-pointer">
+                  <p
+                    className={`hover:text-blue-400 ${
+                      locale === "en"
+                        ? "hover:translate-x-2"
+                        : "hover:-translate-x-2"
+                    }  duration-200 cursor-pointer`}
+                  >
                     +966549851842
                   </p>
                 </div>
                 <div className="flex gap-3">
                   <Mail />
-                  <p className="hover:text-blue-400 hover:translate-x-2 duration-200 cursor-pointer">
+                  <p
+                    className={`hover:text-blue-400 ${
+                      locale === "en"
+                        ? "hover:translate-x-2"
+                        : "hover:-translate-x-2"
+                    }  duration-200 cursor-pointer`}
+                  >
                     info@rsaay.com
                   </p>
                 </div>
@@ -63,64 +91,76 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:w-1/2">
               <div className="flex flex-1 flex-col gap-4 lg:gap-8 items-start lg:w-1/2">
-                <h3 className="text-xl">Services</h3>
+                <h3 className="text-xl">{t("services")}</h3>
                 <div>
                   <ul className="flex flex-col gap-4 list-disc ml-4">
                     <li>
-                      <a
+                      <Link
                         href="#"
-                        className="hover:text-blue-400 hover:ml-1 duration-200 cursor-pointer"
+                        className={`hover:text-blue-400 ${
+                          locale === "en" ? "hover:ml-1" : "hover:mr-1"
+                        } duration-200 cursor-pointer`}
                       >
-                        Website Development
-                      </a>
+                        {t("website-development")}
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#"
-                        className="hover:text-blue-400 hover:ml-1 duration-200 cursor-pointer"
+                        className={`hover:text-blue-400 ${
+                          locale === "en" ? "hover:ml-1" : "hover:mr-1"
+                        } duration-200 cursor-pointer`}
                       >
-                        Mobile Application Development (IOS & Android)
-                      </a>
+                        {t("mobile-application")}
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#"
-                        className="hover:text-blue-400 hover:ml-1 duration-200 cursor-pointer"
+                        className={`hover:text-blue-400 ${
+                          locale === "en" ? "hover:ml-1" : "hover:mr-1"
+                        } duration-200 cursor-pointer`}
                       >
-                        Rsaay Integrated Learning Management System (LMS)
-                      </a>
+                        {t("lms")}
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="#"
-                        className="hover:text-blue-400 hover:ml-1 duration-200 cursor-pointer"
+                        className={`hover:text-blue-400 ${
+                          locale === "en" ? "hover:ml-1" : "hover:mr-1"
+                        } duration-200 cursor-pointer`}
                       >
-                        RSAY&apos;s Training Courses
-                      </a>
+                        {t("training-course")}
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </div>
               <div>
                 <div className="flex flex-1 flex-col gap-4 lg:gap-8 items-start w-60">
-                  <h3 className="text-xl">Contact Us</h3>
+                  <h3 className="text-xl">{t("contact")}</h3>
                   <div>
                     <ul className="flex flex-col gap-2 lg:gap-4 list-disc ml-4">
                       <li>
-                        <a
-                          href="#"
-                          className="hover:text-blue-400 hover:ml-1 duration-200 cursor-pointer"
+                        <Link
+                          href="/contact/companies"
+                          className={`hover:text-blue-400 ${
+                            locale === "en" ? "hover:ml-1" : "hover:mr-1"
+                          } duration-200 cursor-pointer`}
                         >
-                          For Universty
-                        </a>
+                          {t("companies")}
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#"
-                          className="hover:text-blue-400 hover:ml-1 duration-200 cursor-pointer"
+                        <Link
+                          href="/contact/universities"
+                          className={`hover:text-blue-400 ${
+                            locale === "en" ? "hover:ml-1" : "hover:mr-1"
+                          } duration-200 cursor-pointer`}
                         >
-                          For Company
-                        </a>
+                          {t("universities")}
+                        </Link>
                       </li>
                     </ul>
                   </div>

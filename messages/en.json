@@ -15,7 +15,7 @@
         "name": "Rsay Integrated Learning Managment System (LMS)",
         "href": "/"
       },
-      { "name": "RSAY&apos;s Traning Courses", "href": "/" }
+      { "name": "RSAY's Traning Courses", "href": "/" }
     ],
     "contact": "Contact Us",
     "contactObj": [
@@ -39,5 +39,57 @@
     "our-services-description": "We provide professional training with internationally accredited certificates through courses aligned with market needs",
     "who-we-are": "Who We Are?",
     "who-we-are-description": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success."
+  },
+  "footer": {
+    "copyright": "Copyright 2023 RSAY ITC",
+    "services": "Services",
+    "contact": "Contact Us",
+    "website-development": "Website Development",
+    "mobile-application": "Mobile Application Development (Android & IOS)",
+    "lms": "Rsay Integrated Learning Managment System (LMS)",
+    "training-course": "RSAY's Traning Courses",
+    "companies": "For Companies",
+    "universities": "For Universities",
+    "address": "Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh"
+  },
+  "about": {
+    "who-are-we": "Who Are We?",
+    "our-story": "Our Story",
+    "our-story-description": "A leading Saudi company specializing in professional education services across various fields, including cybersecurity, quality management, and risk management, along with other technical disciplines. We offer flexible learning solutions, allowing you to choose between online learning or attending sessions in state-of-the-art training facilities. This enables ambitious individuals to enhance their skills and grow their expertise while aligning their learning journey with their passion and schedule.",
+    "our-vision": "Our Vision",
+    "our-vision-description": "To be Rsay first choice for professional education and development in the Arab world by offering innovative training programs and internationally accredited certificates that meet market needs and contribute to building professional competencies capable of achieving sustainable success.",
+    "our-mession": "Our Mession",
+    "our-mession-description": "At Rsay, we are committed to empowering individuals to achieve their professional ambitions and develop their skills by providing flexible and comprehensive educational services, supported by local and global expertise, to ensure a holistic learning experience that enhances efficiency and professionalism in evolving work environments."
+  },
+  "contact": {
+    "contact-us": "Contact Us",
+    "partnering": "Invitation for Partnership with Companies in Training",
+    "partnering-uni": "Partnership Invitation with Universities",
+    "partnering-description": "Rasay expresses its desire to establish strategic partnerships with companies across various sectors to deliver specialized training programs aimed at enhancing the skills and competencies necessary to meet market challenges. We believe in the importance of collaboration with companies to achieve common goals in workforce development and improve institutional performance.",
+    "partnering-uni-description": "Rasay is pleased to invite universities and academic institutions to collaborate with us in providing advanced and professional training programs. We believe in the importance of strategic partnerships in enhancing the quality of education and vocational training. Collaborating with universities presents a unique opportunity to achieve our shared goals of developing a qualified workforce that meets the changing needs of the job market.",
+    "importance": "Importance of Partnering with Rasay:",
+    "why": "Why Partner with Rsay?",
+    "invite": "We invite you to explore collaboration opportunities with us and look forward to discussing how we can work together to achieve your goals and enhance the efficiency of your workforce.",
+    "invite-description": "If you represent a company and wish to learn more about our partnership, please do not hesitate to contact us using the information below."
+  },
+  "ContactForm": {
+    "lets-talk": "Let’s Talk",
+    "hear-from-you": "We love to hear from You!",
+    "email-or-call": "Email, call or complete the form to get in touch with us!",
+    "assist-reach": "We're here to assist you. Reach out via email, give us a call, or fill out the form, and we'll respond promptly.",
+    "address": "Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh",
+    "name": "Name",
+    "type-name": "Type you name",
+    "email": "Email Address",
+    "type-email": "Type your email",
+    "phone-number": "Phone",
+    "type-phone-number": "Type your phone number",
+    "site": "Site",
+    "type-site": "Type your site",
+    "position-or-role": "Position Or Role",
+    "type-position-or-role": "Type your position or role",
+    "message": "Message",
+    "type-message": "Type your message",
+    "send": "Send"
   }
 }

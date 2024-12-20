@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Achieving Academic Excellence",
+    "description": "We strive to offer training programs aligned with the latest \ndevelopments in business and technology. By partnering with universities, we can integrate academic \nknowledge with practical experience, contributing to comprehensive educational offerings.",
+    "icon": "/Contact/academic.png"
+  },
+  {
+    "id": "2",
+    "title": "Meeting Job Market Needs",
+    "description": "Through our collaboration with universities, we gain insights into the \nactual requirements of the job market and develop training programs that meet those needs. We work to \nprepare trainees to align with the demands of modern jobs.",
+    "icon": "/Contact/internet-marketing.png"
+  },
+  {
+    "id": "3",
+    "title": "Enhancing Trainer Skills",
+    "description": " Our partnership with universities allows us to enhance trainers’ skills \nthrough joint workshops and advanced training programs, ensuring the delivery of high-quality training \ncontent that aligns with the latest trends in education and training.",
+    "icon": "/Contact/coaching.png"
+  },
+  {
+    "id": "4",
+    "title": "Enhancing Practical Experiences",
+    "description": "We aim to provide opportunities for students to engage in hands-on \nprojects and field training through our partnerships with universities, granting them valuable practical \nexperience and enhancing their future employment prospects.",
+    "icon": "/Contact/mindset.png"
+  }
+]

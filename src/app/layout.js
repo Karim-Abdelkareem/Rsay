@@ -36,6 +36,7 @@ export default async function RootLayout({ children }) {
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const lang = cookies().get("locale")?.value;
   return (
     <html lang="en">
       <body
@@ -46,9 +47,13 @@ export default async function RootLayout({ children }) {
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
-          {children}
+          <div className="overflow-hidden">{children}</div>
           <Footer />
-          <div className="fixed right-0 top-[50%] hover:scale-110 duration-300 z-20 shadow-md border rounded-s-xl overflow-hidden">
+          <div
+            className={`fixed ${
+              lang === "en" ? "right-0" : "left-0"
+            } top-[50%] hover:scale-110 duration-300 z-20 shadow-md border rounded-s-xl overflow-hidden`}
+          >
             <ContactDialog />
           </div>
         </NextIntlClientProvider>
