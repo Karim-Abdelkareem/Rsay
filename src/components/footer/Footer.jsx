@@ -8,7 +8,7 @@ import React from "react";
 
 export default async function Footer() {
   const t = await getTranslations("footer");
-  const locale = cookies().get("locale").value;
+  const locale = cookies().get("locale")?.value;
 
   return (
     <div>
