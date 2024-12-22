@@ -54,7 +54,7 @@ employees acquire the skills needed to adapt to new challenges.`,
 
 export default function Page() {
   const t = useTranslations("contact");
-  const locale = Cookies.get("locale");
+  const locale = Cookies.get("locale") || "en";
   const dataToDisplay = locale === "en" ? companies : companiesAr;
   const [isPartneringVisible, setIsPartneringVisible] = useState(false);
   const [isCollaboratingVisible, setIsCollaboratingVisible] = useState(false);

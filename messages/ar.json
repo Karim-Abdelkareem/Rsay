@@ -112,5 +112,28 @@
     "at-rsay": "في شركة رساي",
     "at-rsay-description": "، نقدم برامج تدريبية متخصصة تجمع بين المعرفة النظرية والخبرة العملية، بهدف تطوير المهارات وتعزيز الأداء في مختلف المجالات التقنية، بما يتماشى مع متطلبات سوق العمل المتطور.",
     "courses": "الدورات"
+  },
+  "ContactDialog": {
+    "contact": "تواصل معنا",
+    "enter-details": "أدخل تفاصيلك للتواصل معنا",
+    "name": "الاسم",
+    "name-placeholder": "اكتب اسمك",
+    "name-required": "الاسم مطلوب",
+    "email": "البريد الإلكتروني",
+    "email-placeholder": "اكتب بريدك الإلكتروني",
+    "email-required": "البريد الإلكتروني مطلوب",
+    "phone": "الهاتف",
+    "phone-placeholder": "اكتب رقم هاتفك",
+    "phone-required": "الهاتف مطلوب",
+    "message": "الرسالة",
+    "message-placeholder": "اكتب رسالتك",
+    "message-required": "الرسالة مطلوبة",
+    "position": "المنصب أو الدور",
+    "position-placeholder": "اكتب منصبك أو دورك",
+    "position-required": "المنصب مطلوب",
+    "site": "الموقع",
+    "site-placeholder": "اكتب موقعك",
+    "site-required": "الموقع مطلوب",
+    "send": "إرسال"
   }
 }

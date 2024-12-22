@@ -13,12 +13,14 @@ import {
 } from "@/components/ui/accordion";
 import setLanguageValue from "@/actions/set-language-action";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 export default function Sidebar({ scrolling }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = useTranslations("Header");
 
   const locale = Cookies.get("locale");
+  const router = useRouter();
 
   const pages = [
     { name: t("pages.0.name"), href: "/" },
@@ -63,7 +65,9 @@ export default function Sidebar({ scrolling }) {
           type="button"
           onClick={handleCloseMenu}
           className={`bg-white text-black fixed ${
-            locale === "en" ? "right-4" : "left-4"
+            locale === "en"
+              ? "right-0 md:top-0 -top-1 md:right-4"
+              : "left-0 md:left-4 -top-1 md:top-0"
           } rounded-full p-[15px] m-[10px] top-0 z-[60] cursor-pointer`}
         >
           <span className="sr-only">Close menu</span>

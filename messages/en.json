@@ -112,5 +112,28 @@
     "at-rsay": "At RSAY",
     "at-rsay-description": "We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands.",
     "courses": "Courses"
+  },
+  "ContactDialog": {
+    "contact": "Contact With Us",
+    "enter-details": "Enter your details to contact us",
+    "name": "Name",
+    "name-placeholder": "type your name",
+    "name-required": "Name is required",
+    "email": "Email",
+    "email-placeholder": "type your email",
+    "email-required": "Email is required",
+    "phone": "Phone",
+    "phone-placeholder": "type your phone number",
+    "phone-required": "Phone is required",
+    "message": "Message",
+    "message-placeholder": "type your message",
+    "message-required": "Message is required",
+    "position": "Position Or Role",
+    "position-placeholder": "type your position or role",
+    "position-required": "Position is required",
+    "site": "Site",
+    "site-placeholder": "type your site",
+    "site-required": "Site is required",
+    "send": "Send"
   }
 }

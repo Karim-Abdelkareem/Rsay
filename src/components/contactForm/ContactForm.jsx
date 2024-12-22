@@ -1,11 +1,67 @@
+"use client";
 import Cookies from "js-cookie";
 import { Mail, MapPin, PhoneCall, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const t = useTranslations("ContactForm");
-  const locale = Cookies.get("locale");
+  const locale = Cookies.get("locale") || "en";
+  const form = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    errors: {},
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    let errors = { ...formData.errors }; // Make a copy of the current errors object
+
+    switch (name) {
+      case "name":
+        if (/[^a-zA-Z\s]/.test(value)) return;
+        if (value === "" || value.length < 3) {
+          errors.name = t("error.name");
+        } else {
+          delete errors.name;
+        }
+        break;
+      case "phone":
+        if (/[^0-9]/.test(value)) return;
+        break;
+      default:
+        break;
+    }
+
+    setFormData({ ...formData, [name]: value, errors });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (Object.keys(formData.errors).length > 0) {
+      setFormData({ ...formData });
+      return;
+    }
+
+    emailjs
+      .sendForm("service_bkoi6bt", "template_i6qv5d3", form.current, {
+        publicKey: "sWk2snuALe_DfFFLw",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <>
       <div className="w-full items-start flex flex-col md:flex-row bg-gray-50 border-t-2">
@@ -60,39 +116,67 @@ export default function ContactForm() {
             </div>
           </div>
         </div>
-        <form className="bg-white shadow-xl w-full md:w-1/2 p-4 flex flex-col justify-center md:p-6">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="bg-white shadow-xl w-full md:w-1/2 p-4 flex flex-col justify-center md:p-6"
+        >
           {/* name */}
           <div className="flex flex-col">
-            <label htmlFor="">{t("name")}</label>
+            <label htmlFor="name">{t("name")}</label>
             <input
-              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
+              id="name"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="my-2 p-3 border-2 border-gray-200 rounded-sm"
               placeholder={t("type-name")}
               type="text"
               required
             />
+            {formData.errors.name && (
+              <span className="text-red-500 text-sm">
+                {formData.errors.name}
+              </span>
+            )}
           </div>
           {/*  email */}
           <div className="flex flex-col">
-            <label htmlFor="">{t("email")}</label>
+            <label htmlFor="email">{t("email")}</label>
             <input
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               className="my-2 p-3 border-2 border-gray-200 rounded-sm"
               placeholder={t("type-email")}
               type="email"
-              name="email"
               required
             />
+            {formData.errors.email && (
+              <span className="text-red-500 text-sm">
+                {formData.errors.email}
+              </span>
+            )}
           </div>
           {/*  phone */}
           <div className="flex flex-col">
-            <label htmlFor="">{t("phone-number")}</label>
+            <label htmlFor="phone">{t("phone-number")}</label>
             <input
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
               className="my-2 p-3 border-2 border-gray-200 rounded-sm"
               placeholder={t("type-phone-number")}
               type="text"
-              name="phone"
               required
             />
+            {formData.errors.phone && (
+              <span className="text-red-500 text-sm">
+                {formData.errors.phone}
+              </span>
+            )}
           </div>
           {/* site */}
           <div className="flex flex-col">
@@ -118,22 +202,29 @@ export default function ContactForm() {
           </div>
           {/* message */}
           <div className="flex flex-col">
-            <label htmlFor="">{t("message")}</label>
+            <label htmlFor="message">{t("message")}</label>
             <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
               className="my-2 p-3 border-2 border-gray-200 rounded-sm"
               placeholder={t("type-message")}
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
+              rows="4"
               required
             ></textarea>
           </div>
           {/* submit */}
-          <button className="flex items-center gap-3 w-1/4 justify-center my-2 p-3  text-white bg-gradient-to-r from-primary to-blue-500 rounded-xl hover:bg-primary cursor-pointer hover:scale-105 duration-500">
-            {t("send")}
+          <div className="flex items-center gap-3 w-1/4 justify-center my-2 p-3 text-white bg-gradient-to-r from-brand to-blue-500 rounded-xl hover:bg-brafrom-brand cursor-pointer hover:scale-105 duration-500">
+            <input
+              type="submit"
+              value={t("send")}
+              className="bg-transparent cursor-pointer"
+            />
             <Send />
-          </button>
+          </div>
         </form>
       </div>
     </>
