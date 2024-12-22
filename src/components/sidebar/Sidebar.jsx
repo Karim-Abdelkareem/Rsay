@@ -26,10 +26,10 @@ export default function Sidebar({ scrolling }) {
   ];
 
   const services = [
-    { name: t("servicesObj.0.name"), href: "/" },
-    { name: t("servicesObj.1.name"), href: "/" },
-    { name: t("servicesObj.2.name"), href: "/" },
-    { name: t("servicesObj.3.name"), href: "/" },
+    { name: t("servicesObj.0.name"), href: t("servicesObj.0.href") },
+    { name: t("servicesObj.1.name"), href: t("servicesObj.1.href") },
+    { name: t("servicesObj.2.name"), href: t("servicesObj.2.href") },
+    { name: t("servicesObj.3.name"), href: t("servicesObj.3.href") },
   ];
 
   const contact = [
@@ -142,6 +142,7 @@ export default function Sidebar({ scrolling }) {
                   <button
                     onClick={() => {
                       setLanguageValue("ar");
+                      router.refresh();
                       handleCloseMenu();
                     }}
                     className="bg-brand text-white font-bold p-4 rounded-md flex gap-6 items-center"
@@ -153,6 +154,7 @@ export default function Sidebar({ scrolling }) {
                   <button
                     onClick={() => {
                       setLanguageValue("en");
+                      router.refresh();
                       handleCloseMenu();
                     }}
                     className="bg-brand text-white font-bold p-4 rounded-md flex gap-6 items-center"

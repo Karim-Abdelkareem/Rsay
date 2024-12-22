@@ -9,9 +9,11 @@ import setLanguageValue from "@/actions/set-language-action";
 import Sidebar from "../sidebar/Sidebar";
 import { useTranslations } from "next-intl";
 import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const t = useTranslations("Header");
+  const router = useRouter();
 
   const locale = Cookies.get("locale");
 
@@ -21,10 +23,10 @@ export default function Header() {
   ];
 
   const services = [
-    { name: t("servicesObj.0.name"), href: "/services/website-develpoment" },
-    { name: t("servicesObj.1.name"), href: "/services/website-develpoment" },
-    { name: t("servicesObj.2.name"), href: "/" },
-    { name: t("servicesObj.3.name"), href: "/" },
+    { name: t("servicesObj.0.name"), href: t("servicesObj.0.href") },
+    { name: t("servicesObj.1.name"), href: t("servicesObj.1.href") },
+    { name: t("servicesObj.2.name"), href: t("servicesObj.2.href") },
+    { name: t("servicesObj.3.name"), href: t("servicesObj.3.href") },
   ];
 
   const contact = [
@@ -62,7 +64,9 @@ export default function Header() {
         scrolling ? "bg-white shadow-lg" : "bg-transparent"
       } fixed w-full top-0 left-0 z-50`}
     >
-      <Logo scrolling={scrolling} />
+      <Link href={"/"}>
+        <Logo scrolling={scrolling} />
+      </Link>
       <div className="gap-4 hidden lg:flex items-center">
         {pages.map((page, i) => (
           <div
@@ -204,6 +208,7 @@ export default function Header() {
               <MenuItem
                 onClick={() => {
                   setLanguageValue("en");
+                  router.refresh();
                 }}
               >
                 <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none hover:cursor-pointer">
@@ -213,6 +218,7 @@ export default function Header() {
               <MenuItem
                 onClick={() => {
                   setLanguageValue("ar");
+                  router.refresh();
                 }}
               >
                 <div className="block px-4 py-3 font-bold text-base text-brand data-[focus]:bg-brand data-[focus]:text-white data-[focus]:outline-none hover:cursor-pointer">

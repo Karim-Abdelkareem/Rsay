@@ -1,0 +1,32 @@
+[
+  {
+    "name": "تعزيز الأداء التعليمي",
+    "description": "يتيح النظام للمؤسسات تحسين كفاءة برامج التدريب وتطوير المهارات بشكل مستمر",
+    "imageUrl": "/Services/LMS/outcome.png",
+    "icon": "/Services/LMS/exam.png"
+  },
+  {
+    "name": "رفع الإنتاجية",
+    "description": " من خلال تقديم دورات مرنة تناسب جداول الموظفين، مما يساهم في تحسين الأداء دون التأثير على الإنتاجية",
+    "imageUrl": "/Services/LMS/boosted.png",
+    "icon": "/Services/LMS/efficiency.png"
+  },
+  {
+    "name": "تحقيق التكامل الرقمي",
+    "description": " يساعد النظام المؤسسات على تبني التحول الرقمي في عمليات التدريب والتطوير",
+    "imageUrl": "/Services/LMS/transformation.png",
+    "icon": "/Services/LMS/data-transformation.png"
+  },
+  {
+    "name": "تقليل التكلفة",
+    "description": " تقليل الحاجة إلى التدريب التقليدي في القاعات، مما يوفر الجهد والموارد",
+    "imageUrl": "/Services/LMS/cost.png",
+    "icon": "/Services/LMS/efficiency (1).png"
+  },
+  {
+    "name": "تعزيز التفاعل والمشاركة",
+    "description": "من خلال أدوات التفاعل المستمرة، ما يحفز المتدربين على المشاركة وتحقيق أفضل النتائج",
+    "imageUrl": "/Services/LMS/engagement.png",
+    "icon": "/Services/LMS/interaction.png"
+  }
+]

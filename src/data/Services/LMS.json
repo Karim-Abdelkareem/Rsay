@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Enhanced Learning Outcomes",
+    "imageUrl": "/Services/LMS/outcome.png",
+    "icon": "/Services/LMS/exam.png",
+    "description": "Helps organizations deliver high-quality training programs that drive continuous skill development."
+  },
+  {
+    "name": "Boosted Productivity",
+    "imageUrl": "/Services/LMS/boosted.png",
+    "icon": "/Services/LMS/efficiency.png",
+    "description": "Enables flexible training without disrupting daily operations."
+  },
+  {
+    "name": "Digital Transformation",
+    "imageUrl": "/Services/LMS/transformation.png",
+    "icon": "/Services/LMS/data-transformation.png",
+    "description": "Supports the shift to digital learning for more efficient training processes."
+  },
+  {
+    "name": "Cost Efficiency",
+    "imageUrl": "/Services/LMS/cost.png",
+    "icon": "/Services/LMS/efficiency (1).png",
+    "description": "Reduces reliance on traditional in-person training, saving time and resources."
+  },
+  {
+    "name": "Increased Engagement",
+    "imageUrl": "/Services/LMS/engagement.png",
+    "icon": "/Services/LMS/interaction.png",
+    "description": "Fosters interaction through discussion forums and real-time notifications, improving learner participation."
+  }
+]

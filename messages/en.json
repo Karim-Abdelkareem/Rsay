@@ -6,16 +6,19 @@
     ],
     "services": "Services",
     "servicesObj": [
-      { "name": "Website Development", "href": "/" },
+      {
+        "name": "Website Development",
+        "href": "/services/website-development"
+      },
       {
         "name": "Mobile Applicatoion Development (Android & IOS)",
-        "href": "/"
+        "href": "/services/mobile-application"
       },
       {
         "name": "Rsay Integrated Learning Managment System (LMS)",
-        "href": "/"
+        "href": "/services/lms"
       },
-      { "name": "RSAY's Traning Courses", "href": "/" }
+      { "name": "RSAY's Traning Courses", "href": "/services/training-courses" }
     ],
     "contact": "Contact Us",
     "contactObj": [
@@ -38,7 +41,8 @@
     "our-services": "Our Services",
     "our-services-description": "We provide professional training with internationally accredited certificates through courses aligned with market needs",
     "who-we-are": "Who We Are?",
-    "who-we-are-description": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success."
+    "who-we-are-description": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success.",
+    "download": "Download Profile"
   },
   "footer": {
     "copyright": "Copyright 2023 RSAY ITC",
@@ -91,5 +95,22 @@
     "message": "Message",
     "type-message": "Type your message",
     "send": "Send"
+  },
+  "Services": {
+    "lets-talk": "Let's Talk",
+    "web": "Website Development",
+    "web-description": "Our website development service focuses on designing and building digital platforms that represent your brand’s identity and reflect your vision. A website is more than just a digital presence—it’s a powerful tool for engaging customers, promoting products, and delivering services.",
+    "why": "Why Is This Service Curcial?",
+    "features": "Features",
+    "why-choose": "Why Choose Us?",
+    "why-description": "At Rsay Information Technology, we are committed to delivering high-quality, customized websites that meet the unique needs of each client. Our goal is to create engaging digital experiences that strengthen customer relationships and drive business success in today’s competitive digital environment.",
+    "mobile-application": "mobile application development (Android & IOS)",
+    "mobile-description": "In today’s world, where smartphones have become essential tools for everyday life, having a mobile application is crucial for businesses to connect with their customers and offer services seamlessly.",
+    "lms": "Rsay Integrated Learning Managment System (LMS)",
+    "lms-description": "Our LMS is a comprehensive digital learning solution designed to help organizations create, manage, and deliver training programs efficiently. It provides a flexible learning environment that supports both self-paced and live training sessions, enabling organizations to enhance employee skills and offer high-quality educational experiences.",
+    "lms-why": "Rasai’s LMS is an essential tool for organizations looking to enhance their learning and development efforts. It provides a modern, efficient, and scalable platform that meets the evolving educational needs of businesses and institutions.",
+    "at-rsay": "At RSAY",
+    "at-rsay-description": "We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands.",
+    "courses": "Courses"
   }
 }

@@ -96,7 +96,7 @@ export default async function Footer() {
                   <ul className="flex flex-col gap-4 list-disc ml-4">
                     <li>
                       <Link
-                        href="#"
+                        href="/services/website-development"
                         className={`hover:text-blue-400 ${
                           locale === "en" ? "hover:ml-1" : "hover:mr-1"
                         } duration-200 cursor-pointer`}
@@ -106,7 +106,7 @@ export default async function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="#"
+                        href="/services/mobile-application"
                         className={`hover:text-blue-400 ${
                           locale === "en" ? "hover:ml-1" : "hover:mr-1"
                         } duration-200 cursor-pointer`}
@@ -116,7 +116,7 @@ export default async function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="#"
+                        href="/services/lms"
                         className={`hover:text-blue-400 ${
                           locale === "en" ? "hover:ml-1" : "hover:mr-1"
                         } duration-200 cursor-pointer`}
@@ -126,7 +126,7 @@ export default async function Footer() {
                     </li>
                     <li>
                       <Link
-                        href="#"
+                        href="/services/training-courses"
                         className={`hover:text-blue-400 ${
                           locale === "en" ? "hover:ml-1" : "hover:mr-1"
                         } duration-200 cursor-pointer`}

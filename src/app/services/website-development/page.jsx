@@ -1,53 +1,66 @@
 "use client";
 import ServicesIcons from "@/components/servicesIcons/ServicesIcons";
 import Image from "next/image";
-import React from "react";
-import benefits from "@/data/website-benefits";
+import React, { useEffect, useState } from "react";
+import benefits from "@/data/Services/website-benefits";
+import benefitsAr from "@/data/Services/website-benefitsAr";
 import { HoverEffectServices } from "@/components/ui/card-hover-effect-service";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import Cookies from "js-cookie";
 
 export default function Page() {
+  const t = useTranslations("Services");
+  const locale = Cookies.get("locale") || "en";
+  const [servicesToDisplay, setServicesToDisplay] = useState([]);
+  const [benefitsToDisplay, setBenefitsToDisplay] = useState([]);
+  useEffect(() => {
+    if (locale === "en") {
+      setServicesToDisplay(services);
+      setBenefitsToDisplay(benefits);
+    } else {
+      setServicesToDisplay(servicesAr);
+      setBenefitsToDisplay(benefitsAr);
+    }
+  }, [locale]);
+
   return (
     <>
-      <div className="absolute h-screen md:h-[35rem] w-full -z-10 ">
-        <div className="absolute top-0 w-full h-screen md:h-[35rem] bg-black/70 "></div>
+      <div className="absolute h-[45rem] md:h-[35rem] w-full -z-10 ">
+        <div className="absolute top-0 w-full h-[45rem] md:h-[35rem] bg-black/70 "></div>
         <Image
           src="/Services/website development.jpeg"
           width={1920}
           height={1080}
           alt="bg"
-          className="w-full h-screen md:h-[35rem] object-cover "
+          className="w-full h-[45rem] md:h-[35rem] object-cover "
         />
       </div>
-      <div className="px-6 lg:px-0 py-32 lg:justify-around w-full flex flex-col gap-10 items-center h-screen md:h-[35rem] ">
+      <div className="px-6 lg:px-0 py-32 lg:justify-around w-full flex flex-col gap-10 items-center h-[45rem] md:h-[35rem] ">
         <ServicesIcons />
-        <h1 className="uppercase text-white font-brush text-5xl">
-          website development
+        <h1 className="uppercase text-white font-brush text-center text-5xl">
+          {t("web")}
         </h1>
         <p className="text-center text-white font-medium text-xl max-w-5xl">
-          Our website development service focuses on designing and building
-          digital platforms that represent your brand’s identity and reflect
-          your vision. A website is more than just a digital presence—it’s a
-          powerful tool for engaging customers, promoting products, and
-          delivering services.
+          {t("web-description")}
         </p>
         <Link href="/contact/companies">
           <button className="bg-brand text-white font-semibold w-32 py-3 rounded-xl text-center hover:ring-4 ring-brand hover:bg-brand/25 hover:scale-105 duration-300">
-            Let&apos;s Talk
+            {t("lets-talk")}
           </button>
         </Link>
       </div>
       <div className="my-20">
         <h2
-          className={`${"-rotate-2"} text-center font-brush text-5xl font-bold`}
+          className={`${"-rotate-2"} text-center font-brush text-4xl md:text-5xl font-bold`}
         >
-          Why is this service curcial?
+          {t("why")}
         </h2>
         {/* filp cards */}
         <div className="mx-auto flex justify-center py-10 sm:py-10 lg:max-w-7xl ">
           <div className="flex justify-center flex-col gap-12 sm:gap-16">
-            <div className="grid gap-10 sm:gap-12 xl:gap-16 lg:grid-cols-3">
-              {services.map((service) => (
+            <div className="grid gap-10 sm:gap-12 xl:gap-16 md:grid-cols-2 lg:grid-cols-3">
+              {servicesToDisplay.map((service) => (
                 <div
                   key={service.name}
                   className="group h-[320px] w-[320px] [perspective:1000px] mx-auto"
@@ -94,27 +107,29 @@ export default function Page() {
         <h2
           className={`${"-rotate-2"} text-center font-brush text-5xl font-bold`}
         >
-          Features
+          {t("features")}
         </h2>
         <div className="max-w-7xl mx-auto px-8">
-          <HoverEffectServices items={benefits} />
+          <HoverEffectServices items={benefitsToDisplay} />
         </div>
       </div>
       <div className="my-20 ">
         <h2
           className={`${"-rotate-2"} text-center font-brush text-5xl font-bold`}
         >
-          Why Choose Us?
+          {t("why-choose")}
         </h2>
-        <div className="max-w-5xl mx-auto my-20 rounded-xl shadow-xl px-8 bg-slate-50 flex items-center justify-between">
-          <p className="text-2xl max-w-xl text-gray-600 mb-4">
-            At Rsay Information Technology, we are committed to delivering
-            high-quality, customized websites that meet the unique needs of each
-            client. Our goal is to create engaging digital experiences that
-            strengthen customer relationships and drive business success in
-            today’s competitive digital environment.
+        <div className="max-w-5xl mx-auto my-20 rounded-xl shadow-xl px-8 bg-slate-50 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-2xl max-w-xl text-gray-600 mb-4 order-2 md:order-1">
+            {t("why-description")}
           </p>
-          <Image src="/Services/why.png" alt="" width={400} height={400} />
+          <Image
+            src="/Services/why.png"
+            alt=""
+            width={400}
+            height={400}
+            className="order-1 md:order-2"
+          />
         </div>
       </div>
     </>
@@ -162,5 +177,48 @@ const services = [
     icon: "/Services/market.png",
     description:
       "A well-designed website helps you reach new customers beyond geographical boundaries, expanding your market base.",
+  },
+];
+const servicesAr = [
+  {
+    step: "01",
+    name: "تعزيز الهوية الرقمية",
+    description:
+      "موقع الويب يعكس شخصية العلامة التجارية، ويمنح عملاءك نظرة واضحة حول هويتك وخدماتك",
+    imageUrl: "/Services/brand.jpg",
+    icon: "/Services/muscle.png",
+  },
+  {
+    step: "02",
+    name: "الوصول المستمر",
+    description:
+      "يمكن للعملاء زيارة موقعك في أي وقت ومن أي مكان، مما يزيد من فرص التواصل ونمو المبيعات",
+    imageUrl: "/Services/Accessibility.webp",
+    icon: "/Services/24-hour-clock.png",
+  },
+
+  {
+    step: "03",
+    name: "التسويق الفعال (SEO)",
+    description:
+      "يُعد الموقع الإلكتروني أداة رئيسية في استراتيجيات التسويق الرقمي، مثل تحسين محركات البحث",
+    imageUrl: "/Services/markting.jpg",
+    icon: "/Services/promotion.png",
+  },
+  {
+    step: "04",
+    name: "زيادة المصداقية",
+    description:
+      " وجود موقع إلكتروني احترافي يعزز ثقة العملاء بك ويُظهر احترافية أعمالك",
+    imageUrl: "/Services/credibility.jpg",
+    icon: "/Services/trustworthy.png",
+  },
+  {
+    step: "05",
+    name: "التوسع في السوق",
+    description:
+      "يتيح الموقع الوصول إلى أسواق جديدة دون قيود جغرافية، ما يُسهم في زيادة قاعدة العملاء",
+    imageUrl: "/Services/Market-Expansion.jpg",
+    icon: "/Services/market.png",
   },
 ];

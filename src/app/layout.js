@@ -8,6 +8,7 @@ import Footer from "@/components/footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { cookies } from "next/headers";
+import WhatsApp from "@/components/whatsApp/WhatsApp";
 
 const vt323 = VT323({
   weight: "400",
@@ -33,17 +34,16 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const locale = await getLocale();
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
-  const lang = cookies().get("locale")?.value;
+  const lang = locale || "en";
+
+  const direction = lang === "ar" ? "rtl" : "ltr";
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body
         className={` ${orkney.variable} ${vt323.variable} ${permanentMarker.variable} antialiased`}
-        style={{
-          direction: cookies().get("locale")?.value === "ar" ? "rtl" : "ltr",
-        }}
+        style={{ direction }}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
@@ -56,6 +56,7 @@ export default async function RootLayout({ children }) {
           >
             <ContactDialog />
           </div>
+          <WhatsApp />
         </NextIntlClientProvider>
       </body>
     </html>

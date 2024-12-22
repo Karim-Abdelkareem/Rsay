@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Enhanced Digital Presence",
+    "imageUrl": "/Services/enhance.jpg",
+    "icon": "/Services/technology.png",
+    "description": "Mobile apps keep your business in the hands of customers 24/7, fostering continuous engagement and brand loyalty."
+  },
+  {
+    "name": "Improved Customer Service",
+    "imageUrl": "/Services/customer.jpg",
+    "icon": "/Services/customer-care.png",
+    "description": "Provide personalized services and quick responses to customer inquiries, enhancing their satisfaction."
+  },
+  {
+    "name": "Increased Sales and Revenue",
+    "imageUrl": "/Services/sales.jpg",
+    "icon": "/Services/increase.png",
+    "description": "Boost marketing efforts through in-app promotions and push notifications, driving more sales."
+  },
+  {
+    "name": "Support Business Growth and Expansion",
+    "imageUrl": "/Services/business.jpg",
+    "icon": "/Services/business-expansion.png",
+    "description": "Reach a broader audience by targeting smartphone users worldwide."
+  },
+  {
+    "name": "Gain a Competitive Advantage",
+    "imageUrl": "/Services/compatitive.jpg",
+    "icon": "/Services/advantage.png",
+    "description": "A unique and high-quality mobile app helps your business stand out, attract new customers, and retain existing ones."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "تعزيز التواجد الرقمي",
+    "description": "تطبيقات الهاتف المحمول تتيح لشركتك فرصة التواجد في أيدي العملاء على مدار الساعة، مما يزيد من التواصل المستمر ويعزز الولاء.",
+    "imageUrl": "/Services/enhance.jpg",
+    "icon": "/Services/technology.png"
+  },
+  {
+    "name": "تحسين خدمة العملاء",
+    "description": "من خلال التطبيقات، يمكن تقديم خدمات مخصصة وإجابة فورية على استفسارات العملاء، مما يعزز رضاهم.",
+    "imageUrl": "/Services/customer.jpg",
+    "icon": "/Services/customer-care.png"
+  },
+  {
+    "name": "زيادة المبيعات والإيرادات",
+    "description": "تساهم التطبيقات في تعزيز التسويق المباشر، سواء من خلال الإعلانات داخل التطبيق أو حملات الإشعارات الفورية.",
+    "imageUrl": "/Services/sales.jpg",
+    "icon": "/Services/increase.png"
+  },
+  {
+    "name": "دعم التوسع والنمو",
+    "description": "التطبيقات الذكية تتيح للشركات الوصول إلى جمهور أوسع من خلال استهداف مستخدمي الهواتف الذكية في أي مكان.",
+    "imageUrl": "/Services/business.jpg",
+    "icon": "/Services/business-expansion.png"
+  },
+  {
+    "name": "التميز عن المنافسين",
+    "description": "تقديم تطبيق مخصص ومتميز يعزز من هوية شركتك، ويساعدك في جذب عملاء جدد والاحتفاظ بالعملاء الحاليين.",
+    "imageUrl": "/Services/compatitive.jpg",
+    "icon": "/Services/advantage.png"
+  }
+]
