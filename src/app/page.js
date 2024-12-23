@@ -102,12 +102,7 @@ export default function Home() {
     transition: { delay: 0.4, duration: 0.6, ease: "easeOut" },
   };
 
-  const flipWords = [
-    t("filpwords.0"),
-    t("filpwords.1"),
-    t("filpwords.2"),
-    t("filpwords.3"),
-  ];
+  const flipWords = [t("filpwords.0"), t("filpwords.1")];
 
   const words = [
     {
@@ -294,7 +289,21 @@ export default function Home() {
           >
             <button className="flex flex-col justify-center items-center gap-2 md:p-5 p-3 w-[200px] h-[200px] rounded-full cursor-pointer font-semibold text-black text-2xl  text-wrap border shadow-stone-950 bg-transparent bg-white transition-all duration-300 border-stone-900">
               {t("download")}
-              <Download />
+              <Image
+                src={"/Home/cloud.gif"}
+                alt=""
+                width={64}
+                height={64}
+                className="hidden md:block"
+              />
+              <Image
+                src={"/Home/mobile.gif"}
+                alt=""
+                width={64}
+                height={64}
+                className="block md:hidden"
+              />
+              {/* <Download /> */}
             </button>
           </Link>
         </FramerMagnetic>
