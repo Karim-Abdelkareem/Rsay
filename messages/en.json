@@ -33,7 +33,7 @@
   },
   "HomePage": {
     "title": "RSAY",
-    "filpwords": ["Knowledge", "Skills", "Quality", "Impact"],
+    "filpwords": ["Learn Today", "Lead Tomorrow"],
     "subtitle": "Information Technology Company",
     "description": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success.",
     "start-now": "Start Now",
@@ -54,7 +54,7 @@
     "training-course": "RSAY's Traning Courses",
     "companies": "For Companies",
     "universities": "For Universities",
-    "address": "Abdul Samad Al-Tanoukhi Street, Al-Zahra District, Riyadh"
+    "address": "Al Urubah Rd, Al Wurud, Riyadh, Saudi Arabia"
   },
   "about": {
     "who-are-we": "Who Are We?",

@@ -136,9 +136,7 @@ export default function Home() {
       <div className="px-6 lg:px-0 py-32 text-white lg:justify-around w-full flex flex-col lg:flex-row h-[45rem] lg:h-screen">
         <div className="lg:w-1/2">
           <h4 className="text-white text-sm md:text-lg lg:text-xl">
-            {`${t("filpwords.0")} | ${t("filpwords.1")} | ${t(
-              "filpwords.2"
-            )} | ${t("filpwords.3")}`}
+            {`${t("filpwords.0")} | ${t("filpwords.1")}`}
           </h4>
 
           {/* <FlipWords

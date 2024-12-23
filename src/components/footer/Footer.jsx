@@ -53,19 +53,7 @@ export default async function Footer() {
                   <MapPin />
                   <p>{t("address")}</p>
                 </div>
-                <div className="flex gap-3">
-                  <PhoneCall />
-                  <p
-                    className={`hover:text-blue-400 ${
-                      locale === "en"
-                        ? "hover:translate-x-2"
-                        : "hover:-translate-x-2"
-                    }  duration-200 cursor-pointer`}
-                  >
-                    +966549851842
-                  </p>
-                </div>
-                <Link href="tel:+966549851842">
+                <Link href="tel:+966552791055">
                   <div className="flex gap-3">
                     <PhoneCall />
                     <p
@@ -75,7 +63,7 @@ export default async function Footer() {
                           : "hover:-translate-x-2"
                       }  duration-200 cursor-pointer`}
                     >
-                      +966549851842
+                      +966552791055
                     </p>
                   </div>
                 </Link>
@@ -90,6 +78,20 @@ export default async function Footer() {
                       }  duration-200 cursor-pointer`}
                     >
                       info@rsaay.com
+                    </p>
+                  </div>
+                </Link>
+                <Link href="mailto:sales@rsaay.com">
+                  <div className="flex gap-3">
+                    <Mail />
+                    <p
+                      className={`hover:text-blue-400 ${
+                        locale === "en"
+                          ? "hover:translate-x-2"
+                          : "hover:-translate-x-2"
+                      }  duration-200 cursor-pointer`}
+                    >
+                      sales@rsaay.com
                     </p>
                   </div>
                 </Link>
