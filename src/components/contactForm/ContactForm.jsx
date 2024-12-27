@@ -4,6 +4,7 @@ import { Mail, MapPin, PhoneCall, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
 
 export default function ContactForm() {
   const t = useTranslations("ContactForm");
@@ -73,18 +74,34 @@ export default function ContactForm() {
             <p className="font-bold">{t("email-or-call")} </p>
             <p className="my-2 text-gray-600 w-3/4">{t("assist-reach")}</p>
             <div className="my-10">
-              <div className="flex items-center gap-4 my-6">
-                <Mail className="size-7" />
-                <p
-                  className={`hover:text-blue-500 ${
-                    locale === "en"
-                      ? "hover:translate-x-2 "
-                      : "hover:-translate-x-2 "
-                  } duration-200 cursor-pointer`}
-                >
-                  info@rsaay.com
-                </p>
-              </div>
+              <Link href="mailto:info@rsaay.com">
+                <div className="flex items-center gap-4 my-6">
+                  <Mail className="size-7" />
+                  <p
+                    className={`hover:text-blue-500 ${
+                      locale === "en"
+                        ? "hover:translate-x-2 "
+                        : "hover:-translate-x-2 "
+                    } duration-200 cursor-pointer`}
+                  >
+                    info@rsaay.com
+                  </p>
+                </div>
+              </Link>
+              <Link href="mailto:sales@rsaay.com">
+                <div className="flex items-center gap-4 my-6">
+                  <Mail className="size-7" />
+                  <p
+                    className={`hover:text-blue-400 ${
+                      locale === "en"
+                        ? "hover:translate-x-2"
+                        : "hover:-translate-x-2"
+                    }  duration-200 cursor-pointer`}
+                  >
+                    sales@rsaay.com
+                  </p>
+                </div>
+              </Link>
               <div className="flex items-center gap-4 my-6">
                 <PhoneCall className="size-7" />
                 <p
@@ -94,19 +111,7 @@ export default function ContactForm() {
                       : "hover:-translate-x-2 "
                   } duration-200 cursor-pointer`}
                 >
-                  +966549851842
-                </p>
-              </div>
-              <div className="flex items-center gap-4 my-6">
-                <PhoneCall className="size-7" />
-                <p
-                  className={`hover:text-blue-500 ${
-                    locale === "en"
-                      ? "hover:translate-x-2 "
-                      : "hover:-translate-x-2 "
-                  } duration-200 cursor-pointer`}
-                >
-                  +966549851842
+                  +966552791055
                 </p>
               </div>
               <div className="flex items-center gap-4 my-6">

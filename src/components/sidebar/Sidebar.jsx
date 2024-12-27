@@ -50,10 +50,18 @@ export default function Sidebar({ scrolling }) {
 
   return (
     <>
-      <AlignJustify
-        className={`size-8 ${scrolling ? "text-brand" : "text-white "}`}
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-      />
+      <div className="flex items-center gap-6">
+        <p
+          className={` ${scrolling ? "text-brand" : "text-white "}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          Menu
+        </p>
+        <AlignJustify
+          className={`size-8 ${scrolling ? "text-brand" : "text-white "}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        />
+      </div>
 
       <Dialog
         open={mobileMenuOpen}

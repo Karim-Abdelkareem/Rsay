@@ -15,6 +15,7 @@ import { useTranslations } from "next-intl";
 import Cookies from "js-cookie";
 import FramerMagnetic from "@/components/ui/framer";
 import { useRouter } from "next/navigation";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 export default function Home() {
   const router = useRouter();
@@ -145,18 +146,21 @@ export default function Home() {
           <TextGenerateEffect
             key={`subwords-${animationKey}`}
             words={subwords}
-            className="text-2xl md:text-5xl text-white font-brush -rotate-2"
+            className={`text-2xl md:text-5xl text-white font-brush ${
+              locale === "en" && "-rotate-2"
+            } `}
           />
           <TextGenerateEffect
             key={`subwords2-${animationKey}`}
             words={subwords2}
+            duration={0.5}
             className="text-base md:text-xl text-white"
           />
           <motion.div
             className="flex mt-8 gap-8"
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 8, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 6, duration: 0.5, ease: "easeOut" }}
           >
             <Link href="/contact/universities">
               <button
@@ -176,9 +180,16 @@ export default function Home() {
             </Link>
           </motion.div>
         </div>
-        <div className="hidden lg:flex items-center justify-center">
-          <Loader />
-        </div>
+        <motion.div
+          className="flex mt-8 gap-8"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 2, duration: 0.5, ease: "easeOut" }}
+        >
+          <div className="hidden lg:flex items-center justify-center">
+            <Loader />
+          </div>
+        </motion.div>
         {/* <Image
           src="/Contact/Animation.gif"
           alt="animation"
@@ -194,7 +205,9 @@ export default function Home() {
             <div className="flex flex-col mx-auto items-center">
               <h1
                 className={`text-4xl font-bold font-brush ${
-                  locale == "en" ? "-rotate-3 md:text-5xl" : "md:text-7xl"
+                  locale == "en"
+                    ? "-rotate-3 md:text-5xl"
+                    : "rotate-0 md:text-7xl"
                 } mb-8`}
               >
                 {t("our-services")}
@@ -295,6 +308,7 @@ export default function Home() {
                 width={64}
                 height={64}
                 className="hidden md:block"
+                unoptimized
               />
               <Image
                 src={"/Home/mobile.gif"}
@@ -302,12 +316,54 @@ export default function Home() {
                 width={64}
                 height={64}
                 className="block md:hidden"
+                unoptimized
               />
               {/* <Download /> */}
             </button>
           </Link>
         </FramerMagnetic>
       </div>
+
+      {/* Our Customer */}
+      <div className="flex flex-col items-center">
+        <h1 className="text-4xl md:text-5xl text-center font-bold font-brush">
+          {t("ourCustomer")}
+        </h1>
+        <p className="text-center my-8 text-xl max-w-3xl">
+          {t("ourCustomerObj")}
+        </p>
+        <p className="text-brand font-bold">{t("join")}</p>
+        <div className="my-6">
+          <InfiniteMovingCards
+            items={testimonials}
+            direction={locale === "en" ? "right" : "left"}
+            speed="slow"
+          />
+        </div>
+      </div>
     </>
   );
 }
+
+const testimonials = [
+  {
+    image: "/Sponsers/alsemo.jpg",
+    name: "alsemo",
+  },
+  {
+    image: "/Sponsers/ejad.jpg",
+    name: "ejad",
+  },
+  {
+    image: "/Sponsers/modon.jpg",
+    name: "modon",
+  },
+  {
+    image: "/Sponsers/mora.jpg",
+    name: "Mora",
+  },
+  {
+    image: "/Sponsers/TOQ.jpg",
+    name: "TOQ",
+  },
+];

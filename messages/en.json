@@ -29,7 +29,8 @@
       }
     ],
     "english": "English",
-    "arabic": "Arabic"
+    "arabic": "Arabic",
+    "courses": "Courses"
   },
   "HomePage": {
     "title": "RSAY",
@@ -42,7 +43,10 @@
     "our-services-description": "We provide professional training with internationally accredited certificates through courses aligned with market needs",
     "who-we-are": "Who We Are?",
     "who-we-are-description": "RSAY ITC offers professional training with internationally accredited certificates through courses aligned with market needs. We provide flexible learning options, either online or in equipped classrooms, with interactive content and practical training to ensure easy success.",
-    "download": "Download Profile"
+    "download": "Download Profile",
+    "ourCustomer": "Our Customer, Our Inspiration",
+    "ourCustomerObj": "At RSAY ITC, our customers are more than just clients—they are our partners in innovation. From visionary startups to established enterprises, we collaborate to turn unique ideas into powerful digital experiences.",
+    "join": "Join the growing family of businesses that rely on RSAY ICT to transform their digital presence. Together, we’ll shape the future."
   },
   "footer": {
     "copyright": "Copyright 2023 RSAY ITC",
@@ -63,7 +67,13 @@
     "our-vision": "Our Vision",
     "our-vision-description": "To be Rsay first choice for professional education and development in the Arab world by offering innovative training programs and internationally accredited certificates that meet market needs and contribute to building professional competencies capable of achieving sustainable success.",
     "our-mession": "Our Mession",
-    "our-mession-description": "At Rsay, we are committed to empowering individuals to achieve their professional ambitions and develop their skills by providing flexible and comprehensive educational services, supported by local and global expertise, to ensure a holistic learning experience that enhances efficiency and professionalism in evolving work environments."
+    "our-mession-description": "At Rsay, we are committed to empowering individuals to achieve their professional ambitions and develop their skills by providing flexible and comprehensive educational services, supported by local and global expertise, to ensure a holistic learning experience that enhances efficiency and professionalism in evolving work environments.",
+    "rsay": "RSAY",
+    "ict": "ICT",
+    "website": "Website Development",
+    "mobile": "Moblie Application Development",
+    "lms": "Rsay Integrated Learning Managment System",
+    "training": "Training Courses"
   },
   "contact": {
     "contact-us": "Contact Us",
@@ -111,7 +121,57 @@
     "lms-why": "Rasai’s LMS is an essential tool for organizations looking to enhance their learning and development efforts. It provides a modern, efficient, and scalable platform that meets the evolving educational needs of businesses and institutions.",
     "at-rsay": "At RSAY",
     "at-rsay-description": "We offer specialized training programs that combine theoretical knowledge with practical experience, aiming to develop skills and enhance performance across various technical fields to meet evolving market demands.",
-    "courses": "Courses"
+    "courses": "Courses",
+    "coursess": [
+      {
+        "title": "Software Development and Database Management Training",
+        "image": "/Services/TrainingCourses/softwareengineering.jpeg",
+        "description": "This training provides the necessary skills to develop efficient software applications and manage databases securely. It covers modern programming concepts and software development tools, including popular programming languages. Participants will also learn how to use database management tools and design secure databases. The program emphasizes strategies to ensure software quality and data security, offering practical examples on performance optimization and reliability improvement.",
+        "href": "/services/training-courses/#software-development-training"
+      },
+      {
+        "title": "Artificial Intelligence (AI) Training",
+        "image": "/Services/TrainingCourses/ai-training.webp",
+        "description": "This course covers the fundamentals of AI and machine learning with practical applications in business. It explains the core concepts underpinning AI, how to analyze data, and apply predictive models. The training also explores how to integrate AI into business strategies to improve efficiency and foster innovation, with real-world examples of successful use cases across various sectors.",
+        "href": "/services/training-courses/#ai-training"
+      },
+      {
+        "title": "Cloud Computing Training",
+        "image": "/Services/TrainingCourses/cloud-computing.jpg",
+        "description": "This training focuses on the concept of cloud computing and its use in enhancing performance and flexibility in business. It reviews various types of cloud services, such as SaaS, PaaS, and IaaS, along with guidelines on how to transition to a cloud environment securely. Participants will also learn best practices for managing cloud resources and ensuring security, gaining insights into how cloud computing can improve operations.",
+        "href": "/services/training-courses/#cloud-computing-training"
+      },
+      {
+        "title": "Quality Management and Project Management Training",
+        "image": "/Services/TrainingCourses/quality-management.webp",
+        "description": "This program aims to enhance the skills required to ensure service and product quality within projects. It covers essential project management tools, including planning, execution, and monitoring. Participants will learn about total quality management (TQM) concepts and how to apply them across various fields, along with techniques for performance improvement and problem-solving. The course strengthens participants' ability to meet quality objectives efficiently and effectively.",
+        "href": "/services/training-courses/#quality-management-and-project-management-training"
+      },
+      {
+        "title": "Systems and Network Management Training",
+        "image": "/Services/TrainingCourses/Systems-Network-Management-Training.jpg",
+        "description": "This training focuses on efficiently designing and managing systems and networks. It covers setting up wired and wireless networks, along with configuring the necessary hardware. Participants will learn how to troubleshoot and quickly resolve issues to ensure smooth and secure system performance. The course also reviews essential concepts of network management, including network optimization, performance enhancement, and regular updates. The goal is to equip participants with the skills needed to manage systems independently and effectively.",
+        "href": "/services/training-courses/#systems-and-network-management-training"
+      },
+      {
+        "title": "Cybersecurity and Information Security Training",
+        "image": "/Services/TrainingCourses/cybersecurity.jpg",
+        "description": "This training offers comprehensive knowledge on how to protect information and systems from cyber threats. It covers identifying various types of threats, such as viruses, malware, and cyberattacks. Participants will also learn effective strategies to mitigate these threats, including the use of encryption and firewalls. The course focuses on risk management by applying risk assessment tools and developing incident response plans. Additionally, it reviews relevant laws and legal standards to ensure compliance with data protection regulations.",
+        "href": "/services/training-courses/#cybersecurity-and-information-security-training"
+      },
+      {
+        "title": "Risk Management Training",
+        "image": "/Services/TrainingCourses/risk-management.jpg",
+        "description": "This program aims to empower participants to identify and manage risks effectively in the workplace. It begins by explaining how to conduct thorough risk analysis to identify potential risks and assess their impact. Participants will develop strategies to mitigate risks, including emergency planning. The course introduces modern tools and techniques, such as scenario analysis and risk matrices, while promoting a culture of risk management through continuous process improvement within the organization.",
+        "href": "/services/training-courses/#risk-management-training"
+      },
+      {
+        "title": "Digital Transformation Technologies Training",
+        "image": "/Services/TrainingCourses/Digital-transformation.jpg",
+        "description": "This training provides insights into adopting digital transformation in business. It focuses on strategies for using technology to optimize operations and deliver value to customers. The program highlights the importance of digital transformation and how to identify related opportunities and challenges. It also includes practical examples of successful transformations and guidance on managing cultural change within organizations to ensure the success of digital strategies.",
+        "href": "/services/training-courses/#digital-transformation-technologies-training"
+      }
+    ]
   },
   "ContactDialog": {
     "contact": "Contact With Us",

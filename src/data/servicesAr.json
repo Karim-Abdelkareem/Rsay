@@ -1,5 +1,57 @@
 [
   {
+    "title": "دورات رساي التدريبية",
+    "icon": "/Home/online-learning.png",
+    "href": "/services/training-courses",
+    "overview": "overview ar",
+    "details": "في شركة رساي لتكنولوجيا المعلومات، نحن متخصصون في تقديم التدريب من نظير إلى نظير (P2P) في جميع جوانب تكنولوجيا المعلومات. من حماية المشهد الرقمي إلى تطوير الحلول المبتكرة، وتحسين البنية التحتية، وتحليل الرؤى المستندة إلى البيانات، تمكّن برامجنا الأفراد والمنظمات من إتقان تعقيدات عالم تكنولوجيا المعلومات الحديث.تعاون مع شركة رساي لتكنولوجيا المعلومات للحصول على تدريب لا مثيل له يدفع النجاح في صناعة التكنولوجيا المتطورة باستمرار.",
+    "importance": [
+      {
+        "title": "",
+        "info": ""
+      },
+      {
+        "title": "",
+        "info": ""
+      }
+    ],
+    "benefits": [
+      {
+        "title": "title1",
+        "info": "info1"
+      },
+      {
+        "title": "title1",
+        "info": "info1"
+      },
+      {
+        "title": "title1",
+        "info": "info1"
+      },
+      {
+        "title": "title1",
+        "info": "info1"
+      },
+      {
+        "title": "title1",
+        "info": "info1"
+      },
+      {
+        "title": "title1",
+        "info": "info1"
+      },
+      {
+        "title": "title1",
+        "info": "info1"
+      },
+      {
+        "title": "title1",
+        "info": "info1"
+      }
+    ],
+    "why": "why choose ar"
+  },
+  {
     "title": "برمجة المواقع الإلكترونية",
     "icon": "/Home/web-development.png",
     "href": "/services/website-development",
@@ -258,57 +310,5 @@
       }
     ],
     "why": "نظام التعلم المتكامل من رساي هو أداة أساسية لكل مؤسسة تسعى إلى تحسين التعليم والتدريب بكفاءة عالية وتقديم تجربة تعليمية متطورة تتناسب مع احتياجات العصر."
-  },
-  {
-    "title": "دورات رساي التدريبية",
-    "icon": "/Home/online-learning.png",
-    "href": "/services/training-courses",
-    "overview": "overview ar",
-    "details": "details ar",
-    "importance": [
-      {
-        "title": "",
-        "info": ""
-      },
-      {
-        "title": "",
-        "info": ""
-      }
-    ],
-    "benefits": [
-      {
-        "title": "title1",
-        "info": "info1"
-      },
-      {
-        "title": "title1",
-        "info": "info1"
-      },
-      {
-        "title": "title1",
-        "info": "info1"
-      },
-      {
-        "title": "title1",
-        "info": "info1"
-      },
-      {
-        "title": "title1",
-        "info": "info1"
-      },
-      {
-        "title": "title1",
-        "info": "info1"
-      },
-      {
-        "title": "title1",
-        "info": "info1"
-      },
-      {
-        "title": "title1",
-        "info": "info1"
-      }
-    ],
-    "why": "why choose ar"
   }
 ]

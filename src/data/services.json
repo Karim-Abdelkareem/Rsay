@@ -1,5 +1,33 @@
 [
   {
+    "title": "RSAY's training Courses",
+    "icon": "/Home/online-learning.png",
+    "href": "/services/training-courses",
+    "overview": "rsay courses overview",
+    "details": "At RSAY ITC, we specialize in delivering peer-to-peer (P2P) training across all facets of information technology. From safeguarding digital landscapes to developing innovative solutions, optimizing infrastructure, and analyzing data-driven insights, our programs empower individuals and organizations to master the complexities of the modern IT world.Partner with RSAY ITC for unparalleled training that drives success in the ever-evolving tech industry.",
+    "importance": [
+      {
+        "title": "importance",
+        "info": "importanceimportance"
+      },
+      {
+        "title": "importance",
+        "info": "importanceimportance"
+      }
+    ],
+    "benefits": [
+      {
+        "title": "title",
+        "info": ["info"]
+      },
+      {
+        "title": "title",
+        "info": ["info"]
+      }
+    ],
+    "why": "rsay why choose us"
+  },
+  {
     "title": "Website Development",
     "icon": "/Home/web-development.png",
     "href": "/services/website-development",
@@ -258,33 +286,5 @@
       }
     ],
     "why": "Rasai’s LMS is an essential tool for organizations looking to enhance their learning and development efforts. It provides a modern, efficient, and scalable platform that meets the evolving educational needs of businesses and institutions."
-  },
-  {
-    "title": "RSAY's training Courses",
-    "icon": "/Home/online-learning.png",
-    "href": "/services/training-courses",
-    "overview": "rsay courses overview",
-    "details": "rsay courses details",
-    "importance": [
-      {
-        "title": "importance",
-        "info": "importanceimportance"
-      },
-      {
-        "title": "importance",
-        "info": "importanceimportance"
-      }
-    ],
-    "benefits": [
-      {
-        "title": "title",
-        "info": ["info"]
-      },
-      {
-        "title": "title",
-        "info": ["info"]
-      }
-    ],
-    "why": "rsay why choose us"
   }
 ]
