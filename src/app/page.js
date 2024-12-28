@@ -143,9 +143,9 @@ export default function Home() {
           /> */}
           <div className="flex gap-6 items-center">
             {/* <TypewriterEffectSmooth words={words} className="font-brush" /> */}
-            <div
+            {/* <div
               className={`${
-                locale === "en" && "font-brush"
+                locale === "ar" ? "font-sans" : "font-brush"
               } font-bold text-6xl md:text-8xl my-8`}
             >
               <Typewriter
@@ -156,7 +156,14 @@ export default function Home() {
                   pauseFor: 20000,
                 }}
               />
-            </div>
+            </div> */}
+            <p
+              className={`text-6xl md:text-8xl ${
+                locale === "en" ? "font-brush" : "font-sans"
+              }`}
+            >
+              {t("title")} <span>|</span>
+            </p>
           </div>
           <TextGenerateEffect
             key={`subwords-${animationKey}`}
