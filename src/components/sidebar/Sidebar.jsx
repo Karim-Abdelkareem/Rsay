@@ -19,7 +19,7 @@ export default function Sidebar({ scrolling }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = useTranslations("Header");
 
-  const locale = Cookies.get("locale");
+  const locale = Cookies.get("locale") || "en";
   const router = useRouter();
 
   const pages = [
