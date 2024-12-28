@@ -5,7 +5,7 @@ import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
 export const TypewriterEffect = ({ words, className, cursorClassName }) => {
-  // split text inside of words into array of characters
+  // Split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {
       ...word,
@@ -15,6 +15,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
 
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
+
   useEffect(() => {
     if (isInView) {
       animate(
@@ -45,7 +46,9 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
                   key={`char-${index}`}
                   className={cn(
                     `dark:text-white text-black opacity-0 hidden`,
-                    word.className
+                    word.className,
+                    word.isRTL ? "whitespace-pre" : "", // Add specific class for Arabic
+                    word.isRTL ? "dir-rtl" : "" // Add RTL direction for Arabic text
                   )}
                 >
                   {char}
@@ -57,6 +60,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
       </motion.div>
     );
   };
+
   return (
     <div
       className={cn(
@@ -91,13 +95,14 @@ export const TypewriterEffectSmooth = ({
   className,
   cursorClassName,
 }) => {
-  // split text inside of words into array of characters
+  // Split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {
       ...word,
       text: word.text.split(""),
     };
   });
+
   const renderWords = () => {
     return (
       <div>
@@ -107,7 +112,11 @@ export const TypewriterEffectSmooth = ({
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className={cn(`dark:text-white text-white `, word.className)}
+                  className={cn(
+                    `dark:text-white text-white`,
+                    word.isRTL ? "whitespace-pre" : "", // Add specific class for Arabic
+                    word.isRTL ? "dir-rtl" : "" // Add RTL direction for Arabic text
+                  )}
                 >
                   {char}
                 </span>
@@ -123,7 +132,7 @@ export const TypewriterEffectSmooth = ({
   return (
     <div className={cn("flex space-x-1 my-6", className)}>
       <motion.div
-        className="overflow-hidden pb-5"
+        className="overflow-hidden "
         initial={{
           width: "0%",
         }}
@@ -137,7 +146,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xl sm:text-xl md:text-xl lg:text:5xl xl:text-6xl font-bold"
+          className="text-4xl md:text-8xl lg:text:8xl xl:text-8xl font-bold"
           style={{
             whiteSpace: "nowrap",
           }}

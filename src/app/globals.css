@@ -86,3 +86,12 @@ body {
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.dir-rtl {
+  direction: rtl;
+  text-align: right; 
+}
+
+.whitespace-pre {
+  white-space: pre;
+}
