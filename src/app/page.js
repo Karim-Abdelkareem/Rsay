@@ -161,7 +161,7 @@ export default function Home() {
               className="flex mt-8 gap-8 text-6xl md:text-8xl my-4"
               initial={{ opacity: 0, x: locale === "en" ? -10 : 10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1, duration: 0.5, ease: "easeInOut" }}
+              transition={{ delay: 1, duration: 0.5, ease: "easeIn" }}
               key={`subwords-${animationKey}`}
             >
               <p
@@ -368,7 +368,7 @@ export default function Home() {
           <InfiniteMovingCards
             items={testimonials}
             direction="left"
-            speed="slow"
+            speed="normal"
           />
         </div>
       </div>
@@ -398,8 +398,13 @@ const testimonials = [
     link: "https://morafinance.com/",
   },
   {
-    image: "/Sponsers/TOQ.jpg",
+    image: "/Sponsers/toq.png",
     name: "TOQ",
-    link: "https://toq.sa/en",
+    link: "/",
+  },
+  {
+    image: "/Sponsers/UAP.jpg",
+    name: "UAP",
+    link: "/",
   },
 ];
