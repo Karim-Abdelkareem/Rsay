@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -77,24 +78,28 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li
-            className="w-[300px] max-w-full relative rounded-2xl flex-shrink-0  px-8 py-6 md:w-[300px]"
+          <Link
             key={item.name}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <Image
-                src={item.image}
-                alt={item.name}
-                width={200}
-                height={200}
-                className="object-cover"
-              />
-            </blockquote>
-          </li>
+            <li className="w-[300px] max-w-full relative rounded-2xl flex-shrink-0  px-8 py-6 md:w-[300px]">
+              <blockquote>
+                <div
+                  aria-hidden="true"
+                  className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                ></div>
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  width={200}
+                  height={200}
+                  className="object-cover"
+                />
+              </blockquote>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>

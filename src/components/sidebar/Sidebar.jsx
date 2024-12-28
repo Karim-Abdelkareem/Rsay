@@ -116,7 +116,7 @@ export default function Sidebar({ scrolling }) {
                         <AccordionContent key={service.name}>
                           <Link
                             href={service.href}
-                            className="text-brand px-10 font-semibold"
+                            className="text-xs md:text-sm text-brand px-10 font-semibold"
                             onClick={handleCloseMenu}
                           >
                             {service.name}

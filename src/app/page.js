@@ -333,10 +333,10 @@ export default function Home() {
           {t("ourCustomerObj")}
         </p>
         <p className="text-brand font-bold">{t("join")}</p>
-        <div className="my-6">
+        <div className="my-6" style={{ direction: "ltr" }}>
           <InfiniteMovingCards
             items={testimonials}
-            direction={locale === "en" ? "right" : "left"}
+            direction="left"
             speed="slow"
           />
         </div>
@@ -349,21 +349,26 @@ const testimonials = [
   {
     image: "/Sponsers/alsemo.jpg",
     name: "alsemo",
+    link: "https://al-semo.com/",
   },
   {
     image: "/Sponsers/ejad.jpg",
     name: "ejad",
+    link: "https://ejadtech.sa/",
   },
   {
     image: "/Sponsers/modon.jpg",
     name: "modon",
+    link: "https://modon.gov.sa/en/Pages/default.aspx",
   },
   {
     image: "/Sponsers/mora.jpg",
     name: "Mora",
+    link: "https://morafinance.com/",
   },
   {
     image: "/Sponsers/TOQ.jpg",
     name: "TOQ",
+    link: "https://toq.sa/en",
   },
 ];

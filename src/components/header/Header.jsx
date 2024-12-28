@@ -97,7 +97,7 @@ export default function Header() {
   return (
     <div
       className={`py-3 px-6 flex items-center justify-between transition-all duration-150 ${
-        scrolling ? "bg-white shadow-lg" : "bg-transparent"
+        scrolling ? "bg-white shadow-2xl" : "bg-transparent"
       } fixed w-full top-0 left-0 z-50`}
     >
       <Link href={"/"}>
