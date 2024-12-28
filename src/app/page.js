@@ -162,6 +162,7 @@ export default function Home() {
               initial={{ opacity: 0, x: locale === "en" ? -10 : 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.5, ease: "easeInOut" }}
+              key={`subwords-${animationKey}`}
             >
               <p
                 className={`font-bold ${
