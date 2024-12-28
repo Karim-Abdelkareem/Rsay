@@ -16,6 +16,7 @@ import Cookies from "js-cookie";
 import FramerMagnetic from "@/components/ui/framer";
 import { useRouter } from "next/navigation";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   const router = useRouter();
@@ -141,7 +142,21 @@ export default function Home() {
             duration={4000}
           /> */}
           <div className="flex gap-6 items-center">
-            <TypewriterEffectSmooth words={words} className="font-brush" />
+            {/* <TypewriterEffectSmooth words={words} className="font-brush" /> */}
+            <div
+              className={`${
+                locale === "en" && "font-brush"
+              } font-bold text-6xl md:text-8xl my-8`}
+            >
+              <Typewriter
+                options={{
+                  strings: [t("title")],
+                  autoStart: true,
+                  loop: true,
+                  pauseFor: 20000,
+                }}
+              />
+            </div>
           </div>
           <TextGenerateEffect
             key={`subwords-${animationKey}`}
