@@ -150,7 +150,7 @@ export default function Sidebar({ scrolling }) {
                 </Accordion>
               </div>
               <div className="py-6 px-3">
-                {Cookies.get("locale") === "en" ? (
+                {locale === "en" ? (
                   <button
                     onClick={() => {
                       setLanguageValue("ar");
