@@ -332,7 +332,7 @@ export default function Home() {
         <p className="text-center my-8 text-xl max-w-3xl">
           {t("ourCustomerObj")}
         </p>
-        <p className="text-brand font-bold">{t("join")}</p>
+        <p className="text-brand text-center font-bold">{t("join")}</p>
         <div className="my-6" style={{ direction: "ltr" }}>
           <InfiniteMovingCards
             items={testimonials}
