@@ -19,9 +19,11 @@ export default function ContactForm() {
     errors: {},
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    let errors = { ...formData.errors }; // Make a copy of the current errors object
+    let errors = { ...formData.errors };
 
     switch (name) {
       case "name":
@@ -43,7 +45,10 @@ export default function ContactForm() {
   };
 
   const sendEmail = (e) => {
+    setLoading(true);
     e.preventDefault();
+    console.log(formData);
+
     if (Object.keys(formData.errors).length > 0) {
       setFormData({ ...formData });
       return;
@@ -56,6 +61,15 @@ export default function ContactForm() {
       .then(
         () => {
           console.log("SUCCESS!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+            errors: {},
+          });
+          form.current.reset();
+          setLoading(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -226,9 +240,19 @@ export default function ContactForm() {
             <input
               type="submit"
               value={t("send")}
-              className="bg-transparent cursor-pointer"
+              className={`bg-transparent cursor-pointer ${
+                loading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              disabled={loading} 
             />
-            <Send />
+            {loading ? (
+              <div className="animate-spin">
+                {" "}
+                <Send className="spin" />
+              </div>
+            ) : (
+              <Send />
+            )}
           </div>
         </form>
       </div>

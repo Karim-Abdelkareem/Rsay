@@ -29,6 +29,7 @@ export function ContactDialog() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -51,6 +52,7 @@ export function ContactDialog() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     // Validation checks
     const newErrors = {};
@@ -80,20 +82,20 @@ export function ContactDialog() {
         .then(
           () => {
             console.log("SUCCESS!");
+            setLoading(false);
+            setFormData({
+              firstName: "",
+              email: "",
+              phone: "",
+              role: "",
+              site: "",
+              message: "",
+            });
           },
           (error) => {
             console.log("FAILED...", error.text);
           }
         );
-      // Reset the form after submission
-      setFormData({
-        firstName: "",
-        email: "",
-        phone: "",
-        role: "",
-        site: "",
-        message: "",
-      });
     }
   };
 
@@ -202,9 +204,20 @@ export function ContactDialog() {
           <DialogFooter>
             <button
               type="submit"
-              className="px-10 py-3 bg-blue-700 text-white rounded-md hover:bg-white hover:text-blue-700 shadow-md border"
+              className={`px-10 py-3 rounded-md shadow-md border ${
+                loading
+                  ? "bg-gray-400 text-gray-600 cursor-not-allowed"
+                  : "bg-blue-700 text-white hover:bg-white hover:text-blue-700"
+              }`}
+              disabled={loading}
             >
-              {t("send")}
+              {loading ? (
+                <div className="animate-spin">
+                  <Send className="inline-block mr-2" />
+                </div>
+              ) : (
+                t("send")
+              )}
             </button>
           </DialogFooter>
         </form>
