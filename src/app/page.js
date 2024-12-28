@@ -157,13 +157,21 @@ export default function Home() {
                 }}
               />
             </div> */}
-            <p
-              className={`text-6xl md:text-8xl ${
-                locale === "en" ? "font-brush" : "font-sans"
-              }`}
+            <motion.div
+              className="flex mt-8 gap-8 text-6xl md:text-8xl my-4"
+              initial={{ opacity: 0, x: locale === "en" ? -10 : 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 0.5, ease: "easeInOut" }}
             >
-              {t("title")} <span>|</span>
-            </p>
+              <p
+                className={`font-bold ${
+                  locale === "en" ? "font-brush" : "font-sans"
+                }`}
+              >
+                {t("title")}
+              </p>
+              <span className="animate-pulse text-brand">|</span>
+            </motion.div>
           </div>
           <TextGenerateEffect
             key={`subwords-${animationKey}`}
