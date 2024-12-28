@@ -87,11 +87,3 @@ body {
   display: none;
 }
 
-/* Safari Hack for proper rendering */
-@supports (-webkit-touch-callout: none) {
-  .rtl-safari {
-    direction: rtl; /* Ensure proper rendering direction */
-    text-align: right; /* Align text for Arabic */
-    white-space: nowrap; /* Prevent Safari from splitting Arabic text */
-  }
-}
