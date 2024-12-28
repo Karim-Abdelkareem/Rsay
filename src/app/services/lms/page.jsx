@@ -26,17 +26,17 @@ export default function Page() {
   }, [locale]);
   return (
     <>
-      <div className="absolute h-[45rem] md:h-[35rem] w-full -z-10 ">
-        <div className="absolute top-0 w-full h-[45rem] md:h-[35rem] bg-black/70 "></div>
+      <div className="absolute h-screen md:h-[35rem] w-full -z-10 ">
+        <div className="absolute top-0 w-full h-screen md:h-[35rem] bg-black/70 "></div>
         <Image
           src="/Services/LMS.jpeg"
           width={1920}
           height={1080}
           alt="bg"
-          className="w-full h-[45rem] md:h-[35rem] object-cover "
+          className="w-full h-screen md:h-[35rem] object-cover "
         />
       </div>
-      <div className="px-6 lg:px-0 py-32 lg:justify-around w-full flex flex-col gap-10 items-center h-[45rem] md:h-[35rem] ">
+      <div className="px-6 lg:px-0 py-32 lg:justify-around w-full flex flex-col gap-10 items-center h-screen md:h-[35rem] ">
         <ServicesIcons />
         <h1 className="uppercase text-white font-brush text-3xl md:text-5xl max-w-5xl text-center">
           {t("lms")}
