@@ -368,7 +368,7 @@ export default function Home() {
           <InfiniteMovingCards
             items={testimonials}
             direction="left"
-            speed="normal"
+            speed="fast"
           />
         </div>
       </div>
@@ -400,11 +400,11 @@ const testimonials = [
   {
     image: "/Sponsers/toq.png",
     name: "TOQ",
-    link: "/",
+    link: "#",
   },
   {
     image: "/Sponsers/UAP.jpg",
     name: "UAP",
-    link: "/",
+    link: "#",
   },
 ];
