@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
-
 export const TypewriterEffect = ({ words, className, cursorClassName }) => {
   // Split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -33,7 +32,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
         }
       );
     }
-  }, [isInView]);
+  }, [isInView, animate]);
 
   const renderWords = () => {
     return (

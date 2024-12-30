@@ -20,6 +20,8 @@ export default function Page() {
   const collaboratingRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = partneringRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -29,19 +31,21 @@ export default function Page() {
       { rootMargin: "0px 0px -100px 0px" }
     );
 
-    if (partneringRef.current) {
-      observer.observe(partneringRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (partneringRef.current) {
-        observer.unobserve(partneringRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [partneringRef]);
 
   // Intersection observer for "Collaborating"
   useEffect(() => {
+    const currentRef = collaboratingRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -51,16 +55,16 @@ export default function Page() {
       { rootMargin: "0px 0px -100px 0px" }
     );
 
-    if (collaboratingRef.current) {
-      observer.observe(collaboratingRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (collaboratingRef.current) {
-        observer.unobserve(collaboratingRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [collaboratingRef]);
 
   const motionSettingsPartnering = {
     initial: { opacity: 0, y: 30 },

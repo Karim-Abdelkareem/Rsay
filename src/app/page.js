@@ -1,25 +1,19 @@
 "use client";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import services from "../data/services";
 import servicesAr from "../data/servicesAr";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Download, MoveLeft, MoveRight } from "lucide-react";
-import { ContactDialog } from "@/components/contactDialog/ContactDialog";
-import { FlipWords } from "@/components/ui/flip-words";
+import { MoveLeft, MoveRight } from "lucide-react";
 import Loader from "@/components/loader/Loader";
 import { useTranslations } from "next-intl";
 import Cookies from "js-cookie";
 import FramerMagnetic from "@/components/ui/framer";
-import { useRouter } from "next/navigation";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import Typewriter from "typewriter-effect";
 
 export default function Home() {
-  const router = useRouter();
   const locale = Cookies.get("locale") || "en";
   const t = useTranslations("HomePage");
   const [servicesToDisplay, setServicesToDisplay] = useState([]);
@@ -45,6 +39,8 @@ export default function Home() {
 
   // Intersection observer for "Our Services"
   useEffect(() => {
+    const currentServicesRef = servicesRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -54,19 +50,21 @@ export default function Home() {
       { rootMargin: "0px 0px -100px 0px" }
     );
 
-    if (servicesRef.current) {
-      observer.observe(servicesRef.current);
+    if (currentServicesRef) {
+      observer.observe(currentServicesRef);
     }
 
     return () => {
-      if (servicesRef.current) {
-        observer.unobserve(servicesRef.current);
+      if (currentServicesRef) {
+        observer.unobserve(currentServicesRef);
       }
     };
   }, []);
 
   // Intersection observer for "Who Are We"
   useEffect(() => {
+    const currentWhoAreWeRef = whoAreWeRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -76,13 +74,13 @@ export default function Home() {
       { rootMargin: "0px 0px -100px 0px" }
     );
 
-    if (whoAreWeRef.current) {
-      observer.observe(whoAreWeRef.current);
+    if (currentWhoAreWeRef) {
+      observer.observe(currentWhoAreWeRef);
     }
 
     return () => {
-      if (whoAreWeRef.current) {
-        observer.unobserve(whoAreWeRef.current);
+      if (currentWhoAreWeRef) {
+        observer.unobserve(currentWhoAreWeRef);
       }
     };
   }, []);
@@ -104,14 +102,6 @@ export default function Home() {
     transition: { delay: 0.4, duration: 0.6, ease: "easeOut" },
   };
 
-  const flipWords = [t("filpwords.0"), t("filpwords.1")];
-
-  const words = [
-    {
-      text: t("title"),
-      className: "text-white text-5xl md:text-8xl",
-    },
-  ];
   const subwords = `      ${t("subtitle")}`;
   const subwords2 = `          ${t("description")}`;
 
@@ -136,27 +126,7 @@ export default function Home() {
             {`${t("filpwords.0")} | ${t("filpwords.1")}`}
           </h4>
 
-          {/* <FlipWords
-            words={flipWords}
-            className="text-white text-sm md:text-lg lg:text-4xl font-bold"
-            duration={4000}
-          /> */}
           <div className="flex gap-6 items-center">
-            {/* <TypewriterEffectSmooth words={words} className="font-brush" /> */}
-            {/* <div
-              className={`${
-                locale === "ar" ? "font-sans" : "font-brush"
-              } font-bold text-6xl md:text-8xl my-8`}
-            >
-              <Typewriter
-                options={{
-                  strings: [t("title")],
-                  autoStart: true,
-                  loop: true,
-                  pauseFor: 20000,
-                }}
-              />
-            </div> */}
             <motion.div
               className="flex mt-8 gap-8 text-6xl md:text-8xl my-4"
               initial={{ opacity: 0, x: locale === "en" ? -10 : 10 }}
@@ -221,12 +191,6 @@ export default function Home() {
             <Loader />
           </div>
         </motion.div>
-        {/* <Image
-          src="/Contact/Animation.gif"
-          alt="animation"
-          width={400}
-          height={400}
-        /> */}
       </div>
 
       {/* Our Services Section */}

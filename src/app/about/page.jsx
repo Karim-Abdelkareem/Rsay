@@ -1,6 +1,5 @@
 import TypewriterEffect from "@/components/TypewriterEffect/TypewriterEffect";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { StarsBackground } from "@/components/ui/stars-background";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { cookies } from "next/headers";
