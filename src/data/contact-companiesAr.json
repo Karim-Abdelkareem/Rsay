@@ -3,30 +3,30 @@
     "id": "1",
     "title": "تخصيص البرامج التدريبية",
     "description": "من خلال التعاون مع الشركات، يمكننا تصميم برامج تدريبية متخصصة تلبي احتياجاتكم الفريدة. نحن نعمل على فهم متطلباتكم ونقدم حلولًا تدريبية متخصصة تركز على مهارات فرق عملكم وتحقق أهدافكم الاستراتيجية.",
-    "icon": "/Contact/training.png"
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569134/RSAY%20Images/fh8cukh0dieahbibe47h.png"
   },
   {
     "id": "2",
     "title": "تحسين أداء الموظفين",
     "description": "تم التدريب بالتزامن مع متطلبات السوق لرفع كفاءة الموظفين في أداء المهام الموكلة إليهم. هذا يسهم في دفع كفاءة العمل وزيادة الإنتاجية.",
-    "icon": "/Contact/growth.png"
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569131/RSAY%20Images/nwkza47c0fn5iqpxpfgg.png"
   },
   {
     "id": "3",
     "title": "تطوير البرامج التدريبية المستمرة",
     "description": "في ظل التغيرات التي يشهدها سوق العمل، نسعى إلى العمل المستمر مع الشركات لتحديث وتطوير برامج التدريب بشكل دائم.",
-    "icon": "/Contact/environment.png"
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569135/RSAY%20Images/m9rnvzea9gaahp99txtr.png"
   },
   {
     "id": "4",
     "title": "تلبية متطلبات السوق المتغيرة",
     "description": "برامج التدريب المستمر تساعد على تزويد الموظفين بالمهارات التي يحتاجونها للتكيف مع المتغيرات الجديدة.",
-    "icon": "/Contact/economic.png"
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569132/RSAY%20Images/xziypggyohttvamm0ruf.png"
   },
   {
     "id": "5",
     "title": "تعزيز الابتكار",
     "description": "توفر برامجنا التدريبية فرصًا للموظفين لتطوير أفكار جديدة وحلول مبتكرة، مما يسهم في دفع عجلة الابتكار والنمو داخل الشركة.",
-    "icon": "/Contact/idea.png"
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569131/RSAY%20Images/o5wgnuymand3ig1d9fr7.png"
   }
 ]

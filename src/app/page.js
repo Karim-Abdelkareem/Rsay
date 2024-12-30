@@ -111,7 +111,7 @@ export default function Home() {
       <div className="absolute h-[45rem] lg:h-full -z-10">
         <div className="absolute top-0 w-full h-[45rem] lg:h-screen bg-black/70 "></div>
         <Image
-          src="/Home/bg.jpg"
+          src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735578981/RSAY%20Images/Home/kypgonqn1kzbvqqfyaod.jpg"
           width={1920}
           height={1080}
           alt="bg"
@@ -280,7 +280,7 @@ export default function Home() {
           {...motionSettingsWhoAreWeImage}
         >
           <Image
-            src="/Home/rsay-logo-Photoroom.png"
+            src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735578990/RSAY%20Images/Home/iezmrjhuzwwyzkgofde0.png"
             alt="RSAAY ITC Logo"
             width={400}
             height={400}
@@ -298,7 +298,9 @@ export default function Home() {
             <button className="flex flex-col justify-center items-center gap-2 md:p-5 p-3 w-[200px] h-[200px] rounded-full cursor-pointer font-semibold text-black text-2xl  text-wrap border shadow-stone-950 bg-transparent bg-white transition-all duration-300 border-stone-900">
               {t("download")}
               <Image
-                src={"/Home/cloud.gif"}
+                src={
+                  "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579008/RSAY%20Images/Home/hmicxg4yiqiagfydzc87.gif"
+                }
                 alt=""
                 width={64}
                 height={64}
@@ -306,7 +308,9 @@ export default function Home() {
                 unoptimized
               />
               <Image
-                src={"/Home/mobile.gif"}
+                src={
+                  "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579007/RSAY%20Images/Home/fo34sjrfmnqawz2ienmw.gif"
+                }
                 alt=""
                 width={64}
                 height={64}
@@ -342,32 +346,38 @@ export default function Home() {
 
 const testimonials = [
   {
-    image: "/Sponsers/alsemo.jpg",
+    image:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579268/RSAY%20Images/Home/hjhwdt6gmvxj5kbegj81.jpg",
     name: "alsemo",
     link: "https://al-semo.com/",
   },
   {
-    image: "/Sponsers/ejad.jpg",
+    image:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579269/RSAY%20Images/Home/no6yzqyzriztgq87x9xg.jpg",
     name: "ejad",
     link: "https://ejadtech.sa/",
   },
   {
-    image: "/Sponsers/modon.jpg",
+    image:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579269/RSAY%20Images/Home/gbruud6lk7972fcqarq2.jpg",
     name: "modon",
     link: "https://modon.gov.sa/en/Pages/default.aspx",
   },
   {
-    image: "/Sponsers/mora.jpg",
+    image:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579270/RSAY%20Images/Home/apdd8uy8xluamwmapmu5.jpg",
     name: "Mora",
     link: "https://morafinance.com/",
   },
   {
-    image: "/Sponsers/toq.png",
+    image:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579270/RSAY%20Images/Home/zmjqeezpp8iuvmdhcwp5.png",
     name: "TOQ",
     link: "#",
   },
   {
-    image: "/Sponsers/UAP.jpg",
+    image:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735579271/RSAY%20Images/Home/iv7quxicgqquxrukcrn6.jpg",
     name: "UAP",
     link: "#",
   },

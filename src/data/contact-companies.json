@@ -1,32 +1,32 @@
 [
-    {
-      "id": "1",
-      "title": "Customized Training Programs",
-      "description": "Through collaboration with companies, we can design specialized \ntraining programs that meet your unique needs. We work to understand your requirements and provide \ntailored training solutions that enhance your employees' skills and achieve your strategic objectives.",
-      "icon": "/Contact/training.png"
-    },
-    {
-      "id": "2",
-      "title": "Improving Employee Performance",
-      "description": "Our training programs are designed to enhance employee \nperformance by providing the knowledge and skills necessary to keep pace with developments in their \nfields. This contributes to increasing work efficiency and productivity.",
-      "icon": "/Contact/growth.png"
-    },
-    {
-      "id": "3",
-      "title": "Developing Organizational Culture",
-      "description": "By offering continuous training, we assist companies in fostering \na culture of lifelong learning within the workplace. This motivates employees and increases their loyalty \nand commitment to the company’s goals. ",
-      "icon": "/Contact/environment.png"
-    },
-    {
-      "id": "4",
-      "title": "Meeting Changing Market Demands",
-      "description": " In the face of rapid changes in the job market, partnerships with \ncompanies play a crucial role in continuously updating and developing training programs, ensuring that \nemployees acquire the skills needed to adapt to new challenges.",
-      "icon": "/Contact/economic.png"
-    },
-    {
-      "id": "5",
-      "title": "Enhancing Innovation",
-      "description": "Our training programs provide opportunities for employees to develop new \n    ideas and innovative solutions, contributing to driving innovation and growth within the company.",
-      "icon": "/Contact/idea.png"
-    }
-  ]
+  {
+    "id": "1",
+    "title": "Customized Training Programs",
+    "description": "Through collaboration with companies, we can design specialized \ntraining programs that meet your unique needs. We work to understand your requirements and provide \ntailored training solutions that enhance your employees' skills and achieve your strategic objectives.",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569134/RSAY%20Images/fh8cukh0dieahbibe47h.png"
+  },
+  {
+    "id": "2",
+    "title": "Improving Employee Performance",
+    "description": "Our training programs are designed to enhance employee \nperformance by providing the knowledge and skills necessary to keep pace with developments in their \nfields. This contributes to increasing work efficiency and productivity.",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569131/RSAY%20Images/nwkza47c0fn5iqpxpfgg.png"
+  },
+  {
+    "id": "3",
+    "title": "Developing Organizational Culture",
+    "description": "By offering continuous training, we assist companies in fostering \na culture of lifelong learning within the workplace. This motivates employees and increases their loyalty \nand commitment to the company’s goals. ",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569135/RSAY%20Images/m9rnvzea9gaahp99txtr.png"
+  },
+  {
+    "id": "4",
+    "title": "Meeting Changing Market Demands",
+    "description": " In the face of rapid changes in the job market, partnerships with \ncompanies play a crucial role in continuously updating and developing training programs, ensuring that \nemployees acquire the skills needed to adapt to new challenges.",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569132/RSAY%20Images/xziypggyohttvamm0ruf.png"
+  },
+  {
+    "id": "5",
+    "title": "Enhancing Innovation",
+    "description": "Our training programs provide opportunities for employees to develop new \n    ideas and innovative solutions, contributing to driving innovation and growth within the company.",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569131/RSAY%20Images/o5wgnuymand3ig1d9fr7.png"
+  }
+]

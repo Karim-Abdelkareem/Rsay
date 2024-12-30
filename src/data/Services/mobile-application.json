@@ -1,32 +1,32 @@
 [
   {
     "name": "Enhanced Digital Presence",
-    "imageUrl": "/Services/enhance.jpg",
-    "icon": "/Services/technology.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575023/RSAY%20Images/Mobile_Application_Development/oilbef5crfnlsigwgctz.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575674/RSAY%20Images/Mobile_Application_Development/kwmxej9hb8cjydeesldg.png",
     "description": "Mobile apps keep your business in the hands of customers 24/7, fostering continuous engagement and brand loyalty."
   },
   {
     "name": "Improved Customer Service",
-    "imageUrl": "/Services/customer.jpg",
-    "icon": "/Services/customer-care.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575018/RSAY%20Images/Mobile_Application_Development/rxvgpuuu3s5dnmlzp4gl.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575674/RSAY%20Images/Mobile_Application_Development/ltvei88to16dbno6dii6.png",
     "description": "Provide personalized services and quick responses to customer inquiries, enhancing their satisfaction."
   },
   {
     "name": "Increased Sales and Revenue",
-    "imageUrl": "/Services/sales.jpg",
-    "icon": "/Services/increase.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575021/RSAY%20Images/Mobile_Application_Development/nrbmyvunvdkd6a8oexft.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575674/RSAY%20Images/Mobile_Application_Development/mswsanydxwtiah4a4pau.png",
     "description": "Boost marketing efforts through in-app promotions and push notifications, driving more sales."
   },
   {
     "name": "Support Business Growth and Expansion",
-    "imageUrl": "/Services/business.jpg",
-    "icon": "/Services/business-expansion.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575022/RSAY%20Images/Mobile_Application_Development/mrlxs0hb1dc7eq1b60yg.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575673/RSAY%20Images/Mobile_Application_Development/rfclnijvksbopchdjhhs.png",
     "description": "Reach a broader audience by targeting smartphone users worldwide."
   },
   {
     "name": "Gain a Competitive Advantage",
-    "imageUrl": "/Services/compatitive.jpg",
-    "icon": "/Services/advantage.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575022/RSAY%20Images/Mobile_Application_Development/qyqzzwgfpah47e1moycy.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575673/RSAY%20Images/Mobile_Application_Development/exvgiyzkpzdqjegdeugb.png",
     "description": "A unique and high-quality mobile app helps your business stand out, attract new customers, and retain existing ones."
   }
 ]

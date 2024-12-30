@@ -29,7 +29,7 @@ export default function Page() {
       <div className="absolute h-[45rem] md:h-[35rem] w-full -z-10 ">
         <div className="absolute top-0 w-full h-[45rem] md:h-[35rem] bg-black/70 "></div>
         <Image
-          src="/Services/website development.jpeg"
+          src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576188/RSAY%20Images/Website_Development/liikjb8rpgugatdnomxy.jpg"
           width={1920}
           height={1080}
           alt="bg"
@@ -124,7 +124,7 @@ export default function Page() {
             {t("why-description")}
           </p>
           <Image
-            src="/Services/why.png"
+            src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576189/RSAY%20Images/Website_Development/gdl9hk9x4ikh7jgkfg5f.png"
             alt=""
             width={400}
             height={400}
@@ -140,16 +140,18 @@ const services = [
   {
     step: "01",
     name: "Strengthening Brand Identity",
-    imageUrl: "/Services/brand.jpg",
-    icon: "/Services/muscle.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576196/RSAY%20Images/Website_Development/gt5t9ocenz76wbsupsvf.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576144/RSAY%20Images/Website_Development/rbc8z1l5ebe0fgevafut.png",
     description:
       "Your website reflects your brand’s personality and gives customers a clear understanding of your business and offerings.",
   },
   {
     step: "02",
     name: "24/7 Accessibility",
-    imageUrl: "/Services/Accessibility.webp",
-    icon: "/Services/24-hour-clock.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576143/RSAY%20Images/Website_Development/hw66qltngpixpiqx40lg.webp",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576140/RSAY%20Images/Website_Development/stxxzy6urm4jgezeosgu.png",
     description:
       "A website allows customers to engage with your business anytime, anywhere, increasing interaction and boosting sales.",
   },
@@ -157,24 +159,27 @@ const services = [
   {
     step: "03",
     name: "Effective Marketing Tool",
-    imageUrl: "/Services/markting.jpg",
-    icon: "/Services/promotion.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576196/RSAY%20Images/Website_Development/amjdabd0zknqmadvhwew.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576145/RSAY%20Images/Website_Development/b8b4sviofetndzucaxhq.png",
     description:
       "Websites play a key role in digital marketing strategies, such as content marketing and search engine optimization (SEO).",
   },
   {
     step: "04",
     name: "Building Credibility",
-    imageUrl: "/Services/credibility.jpg",
-    icon: "/Services/trustworthy.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576143/RSAY%20Images/Website_Development/besssi09qlr6geplucyj.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576146/RSAY%20Images/Website_Development/ejgkbwplczhizkv73snp.png",
     description:
       "A professional website builds trust and showcases your business’s reliability to potential clients.",
   },
   {
     step: "05",
     name: "Market Expansion",
-    imageUrl: "/Services/Market-Expansion.jpg",
-    icon: "/Services/market.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576144/RSAY%20Images/Website_Development/qbgwsxdwygqo5zkhwbob.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576143/RSAY%20Images/Website_Development/uwsyy9v4ajftclpzmjmz.png",
     description:
       "A well-designed website helps you reach new customers beyond geographical boundaries, expanding your market base.",
   },
@@ -185,16 +190,18 @@ const servicesAr = [
     name: "تعزيز الهوية الرقمية",
     description:
       "موقع الويب يعكس شخصية العلامة التجارية، ويمنح عملاءك نظرة واضحة حول هويتك وخدماتك",
-    imageUrl: "/Services/brand.jpg",
-    icon: "/Services/muscle.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576196/RSAY%20Images/Website_Development/gt5t9ocenz76wbsupsvf.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576144/RSAY%20Images/Website_Development/rbc8z1l5ebe0fgevafut.png",
   },
   {
     step: "02",
     name: "الوصول المستمر",
     description:
       "يمكن للعملاء زيارة موقعك في أي وقت ومن أي مكان، مما يزيد من فرص التواصل ونمو المبيعات",
-    imageUrl: "/Services/Accessibility.webp",
-    icon: "/Services/24-hour-clock.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576143/RSAY%20Images/Website_Development/hw66qltngpixpiqx40lg.webp",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576140/RSAY%20Images/Website_Development/stxxzy6urm4jgezeosgu.png",
   },
 
   {
@@ -202,23 +209,26 @@ const servicesAr = [
     name: "التسويق الفعال (SEO)",
     description:
       "يُعد الموقع الإلكتروني أداة رئيسية في استراتيجيات التسويق الرقمي، مثل تحسين محركات البحث",
-    imageUrl: "/Services/markting.jpg",
-    icon: "/Services/promotion.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576196/RSAY%20Images/Website_Development/amjdabd0zknqmadvhwew.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576145/RSAY%20Images/Website_Development/b8b4sviofetndzucaxhq.png",
   },
   {
     step: "04",
     name: "زيادة المصداقية",
     description:
       " وجود موقع إلكتروني احترافي يعزز ثقة العملاء بك ويُظهر احترافية أعمالك",
-    imageUrl: "/Services/credibility.jpg",
-    icon: "/Services/trustworthy.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576143/RSAY%20Images/Website_Development/besssi09qlr6geplucyj.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576146/RSAY%20Images/Website_Development/ejgkbwplczhizkv73snp.png",
   },
   {
     step: "05",
     name: "التوسع في السوق",
     description:
       "يتيح الموقع الوصول إلى أسواق جديدة دون قيود جغرافية، ما يُسهم في زيادة قاعدة العملاء",
-    imageUrl: "/Services/Market-Expansion.jpg",
-    icon: "/Services/market.png",
+    imageUrl:
+      "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576144/RSAY%20Images/Website_Development/qbgwsxdwygqo5zkhwbob.jpg",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735576143/RSAY%20Images/Website_Development/uwsyy9v4ajftclpzmjmz.png",
   },
 ];

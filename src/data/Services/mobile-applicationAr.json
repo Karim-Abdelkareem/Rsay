@@ -2,31 +2,31 @@
   {
     "name": "تعزيز التواجد الرقمي",
     "description": "تطبيقات الهاتف المحمول تتيح لشركتك فرصة التواجد في أيدي العملاء على مدار الساعة، مما يزيد من التواصل المستمر ويعزز الولاء.",
-    "imageUrl": "/Services/enhance.jpg",
-    "icon": "/Services/technology.png"
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575023/RSAY%20Images/Mobile_Application_Development/oilbef5crfnlsigwgctz.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575674/RSAY%20Images/Mobile_Application_Development/kwmxej9hb8cjydeesldg.png"
   },
   {
     "name": "تحسين خدمة العملاء",
     "description": "من خلال التطبيقات، يمكن تقديم خدمات مخصصة وإجابة فورية على استفسارات العملاء، مما يعزز رضاهم.",
-    "imageUrl": "/Services/customer.jpg",
-    "icon": "/Services/customer-care.png"
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575018/RSAY%20Images/Mobile_Application_Development/rxvgpuuu3s5dnmlzp4gl.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575674/RSAY%20Images/Mobile_Application_Development/ltvei88to16dbno6dii6.png"
   },
   {
     "name": "زيادة المبيعات والإيرادات",
     "description": "تساهم التطبيقات في تعزيز التسويق المباشر، سواء من خلال الإعلانات داخل التطبيق أو حملات الإشعارات الفورية.",
-    "imageUrl": "/Services/sales.jpg",
-    "icon": "/Services/increase.png"
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575021/RSAY%20Images/Mobile_Application_Development/nrbmyvunvdkd6a8oexft.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575674/RSAY%20Images/Mobile_Application_Development/mswsanydxwtiah4a4pau.png"
   },
   {
     "name": "دعم التوسع والنمو",
     "description": "التطبيقات الذكية تتيح للشركات الوصول إلى جمهور أوسع من خلال استهداف مستخدمي الهواتف الذكية في أي مكان.",
-    "imageUrl": "/Services/business.jpg",
-    "icon": "/Services/business-expansion.png"
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575022/RSAY%20Images/Mobile_Application_Development/mrlxs0hb1dc7eq1b60yg.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575673/RSAY%20Images/Mobile_Application_Development/rfclnijvksbopchdjhhs.png"
   },
   {
     "name": "التميز عن المنافسين",
     "description": "تقديم تطبيق مخصص ومتميز يعزز من هوية شركتك، ويساعدك في جذب عملاء جدد والاحتفاظ بالعملاء الحاليين.",
-    "imageUrl": "/Services/compatitive.jpg",
-    "icon": "/Services/advantage.png"
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575022/RSAY%20Images/Mobile_Application_Development/qyqzzwgfpah47e1moycy.jpg",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575673/RSAY%20Images/Mobile_Application_Development/exvgiyzkpzdqjegdeugb.png"
   }
 ]

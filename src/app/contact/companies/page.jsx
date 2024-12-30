@@ -1,56 +1,14 @@
 "use client";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { Mail, MapPin, PhoneCall, Send } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { delay, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Cookies from "js-cookie";
 import companies from "@/data/contact-companies";
 import companiesAr from "@/data/contact-companiesAr";
 import ContactForm from "@/components/contactForm/ContactForm";
 
-const projects = [
-  {
-    id: "1",
-    title: "Customized Training Programs",
-    description: `Through collaboration with companies, we can design specialized 
-training programs that meet your unique needs. We work to understand your requirements and provide 
-tailored training solutions that enhance your employees' skills and achieve your strategic objectives.`,
-    icon: "/Contact/training.png",
-  },
-  {
-    id: "2",
-    title: "Improving Employee Performance",
-    description: `Our training programs are designed to enhance employee 
-performance by providing the knowledge and skills necessary to keep pace with developments in their 
-fields. This contributes to increasing work efficiency and productivity.`,
-    icon: "/Contact/growth.png",
-  },
-  {
-    id: "3",
-    title: "Developing Organizational Culture",
-    description: `By offering continuous training, we assist companies in fostering 
-a culture of lifelong learning within the workplace. This motivates employees and increases their loyalty 
-and commitment to the company’s goals. `,
-    icon: "/Contact/environment.png",
-  },
-  {
-    id: "4",
-    title: "Meeting Changing Market Demands",
-    description: ` In the face of rapid changes in the job market, partnerships with 
-companies play a crucial role in continuously updating and developing training programs, ensuring that 
-employees acquire the skills needed to adapt to new challenges.`,
-    icon: "/Contact/economic.png",
-  },
-  {
-    id: "5",
-    title: "Enhancing Innovation",
-    description: `Our training programs provide opportunities for employees to develop new 
-    ideas and innovative solutions, contributing to driving innovation and growth within the company.`,
-    icon: "/Contact/idea.png",
-  },
-];
 
 export default function Page() {
   const t = useTranslations("contact");
@@ -131,7 +89,7 @@ export default function Page() {
       <div className="absolute w-full h-[40rem] -z-10">
         <div className="absolute top-0 w-full h-[40rem] bg-black/60"></div>
         <Image
-          src="/Contact/companies.png"
+          src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569187/RSAY%20Images/lplmpvr8itzpkm1cyq2q.png"
           width={1920}
           height={1080}
           alt="bg"
@@ -181,7 +139,7 @@ export default function Page() {
           <div className="order-1 md:order-2">
             <motion.div {...motionSettingsCollaboratingImage}>
               <Image
-                src="/Contact/collaboration.jpg"
+                src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569224/RSAY%20Images/twsh2y4sbjheo9lq4me1.jpg"
                 alt="coll"
                 width={800}
                 height={800}

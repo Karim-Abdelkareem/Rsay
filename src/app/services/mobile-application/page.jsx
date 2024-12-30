@@ -30,7 +30,7 @@ export default function Page() {
       <div className="absolute h-[45rem] md:h-[35rem] w-full -z-10 ">
         <div className="absolute top-0 w-full h-[45rem] md:h-[35rem] bg-black/70 "></div>
         <Image
-          src="/Services/mobile application.jpeg"
+          src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575032/RSAY%20Images/Mobile_Application_Development/qz1tpvmv70dldxpnkbdn.jpg"
           width={1920}
           height={1080}
           alt="bg"
@@ -125,7 +125,7 @@ export default function Page() {
             {t("why-description")}
           </p>
           <Image
-            src="/Services/why.png"
+            src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575041/RSAY%20Images/Mobile_Application_Development/ht40fcz9uugrfcehntet.png"
             alt=""
             width={400}
             height={400}
@@ -140,8 +140,7 @@ export default function Page() {
 const benefits = [
   {
     title: "Exceptional User Experience",
-    imageUrl: "/Services/user-experince1.jpg",
-    icon: "/Services/user-experience.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575020/RSAY%20Images/Mobile_Application_Development/byulmdnhvcvk05ccbrmt.png",
     description: [
       "Intuitive and attractive design to enhance user engagement.",
       "Smooth performance across all devices, ensuring customer satisfaction.",
@@ -149,8 +148,7 @@ const benefits = [
   },
   {
     title: "Custom-Built Applications",
-    imageUrl: "/Services/custom.jpg",
-    icon: "/Services/browser-setting.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575001/RSAY%20Images/Mobile_Application_Development/qqpuiqrprqv8zo2yum0c.png",
     description: [
       "Fully tailored apps designed to align with your business needs and goals.",
       "Scalable solutions to grow with your business over time.",
@@ -158,8 +156,7 @@ const benefits = [
   },
   {
     title: "Seamless System Integration",
-    imageUrl: "/Services/integration.jpg",
-    icon: "/Services/integration.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575006/RSAY%20Images/Mobile_Application_Development/kgn3xqzbolcsvrkyf6to.png",
     description: [
       "Easy integration with internal systems like resource management and payment gateways.",
       "Support for social media connectivity and multiple API integrations.",
@@ -167,24 +164,21 @@ const benefits = [
   },
   {
     title: "Real-Time Push Notifications",
-    imageUrl: "/Services/notification.jpeg",
-    icon: "/Services/notification.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575011/RSAY%20Images/Mobile_Application_Development/lkxvp9vltr8sqjgncbhs.png",
     description: [
       "Stay connected with users by sending timely notifications about offers and updates.",
     ],
   },
   {
     title: "High Performance and Reliability",
-    imageUrl: "/Services/performance.jpeg",
-    icon: "/Services/high-speed.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575006/RSAY%20Images/Mobile_Application_Development/y9gegbfkr6a9eneiatqg.png",
     description: [
       "Applications built for fast response times and stable operation, even under heavy use.",
     ],
   },
   {
     title: "Secure and Easy Payment Management",
-    imageUrl: "/Services/transaction.jpeg",
-    icon: "/Services/trustworthy.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575019/RSAY%20Images/Mobile_Application_Development/x7bfmfotehkatkmwrkgp.png",
     description: [
       "Integration with various payment methods to facilitate smooth transactions.",
       "High-level security to protect user data and financial transactions.",
@@ -192,8 +186,7 @@ const benefits = [
   },
   {
     title: "Continuous Maintenance and Support",
-    imageUrl: "/Services/Market-Expansion.jpg",
-    icon: "/Services/market.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575010/RSAY%20Images/Mobile_Application_Development/lhn9rgnxabvui9yumyc8.png",
     description: [
       "Ongoing updates and quick maintenance to keep your app up-to-date with the latest trends.",
     ],
@@ -207,8 +200,7 @@ const benefitsAr = [
       "تصميم تطبيقات بواجهات جذابة وسهلة الاستخدام لتحسين تفاعل المستخدمين.",
       "تقديم تجربة سلسة على جميع الأجهزة، مما يضمن رضا المستخدمين.",
     ],
-    imageUrl: "/Services/user-experince1.jpg",
-    icon: "/Services/user-experience.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575020/RSAY%20Images/Mobile_Application_Development/byulmdnhvcvk05ccbrmt.png",
   },
   {
     title: "تطبيقات مصممة حسب الطلب",
@@ -216,8 +208,7 @@ const benefitsAr = [
       "تطوير تطبيقات مخصصة بالكامل بناءً على احتياجات العمل وأهداف العملاء.",
       "توفير حلول مرنة قابلة للتوسع والنمو مع تطور الأعمال.",
     ],
-    imageUrl: "/Services/custom.jpg",
-    icon: "/Services/browser-setting.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575001/RSAY%20Images/Mobile_Application_Development/qqpuiqrprqv8zo2yum0c.png",
   },
   {
     title: "تكامل كامل مع الأنظمة الأخرى",
@@ -225,24 +216,21 @@ const benefitsAr = [
       "ربط التطبيق بسهولة مع الأنظمة الداخلية، مثل أنظمة إدارة الموارد أو الدفع الإلكتروني.",
       "توفير إمكانيات الربط مع منصات التواصل الاجتماعي وواجهات برمجية (APIs) متعددة.",
     ],
-    imageUrl: "/Services/integration.jpg",
-    icon: "/Services/integration.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575006/RSAY%20Images/Mobile_Application_Development/kgn3xqzbolcsvrkyf6to.png",
   },
   {
     title: "دعم إشعارات فورية",
     description: [
       "تفعيل الإشعارات لتعزيز التواصل المستمر مع المستخدمين وإبقائهم على اطلاع بأحدث العروض والخدمات.",
     ],
-    imageUrl: "/Services/notification.jpeg",
-    icon: "/Services/notification.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575011/RSAY%20Images/Mobile_Application_Development/lkxvp9vltr8sqjgncbhs.png",
   },
   {
     title: "أداء موثوق وسريع",
     description: [
       "تطوير تطبيقات عالية الأداء تضمن سرعة استجابة واستقرار حتى في ظل الاستخدام الكثيف.",
     ],
-    imageUrl: "/Services/performance.jpeg",
-    icon: "/Services/high-speed.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575006/RSAY%20Images/Mobile_Application_Development/y9gegbfkr6a9eneiatqg.png",
   },
   {
     title: "إدارة دفع سهلة وآمنة",
@@ -250,15 +238,13 @@ const benefitsAr = [
       "دمج خيارات دفع متنوعة لتسهيل عمليات الشراء عبر التطبيق.",
       "توفير أمان عالي لحماية بيانات المستخدمين والمعاملات المالية.",
     ],
-    imageUrl: "/Services/transaction.jpeg",
-    icon: "/Services/trustworthy.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575019/RSAY%20Images/Mobile_Application_Development/x7bfmfotehkatkmwrkgp.png",
   },
   {
     title: "صيانة ودعم مستمر",
     description: [
       "تقديم خدمات صيانة فورية وتحديثات مستمرة لضمان بقاء التطبيق مواكبًا لأحدث المتطلبات.",
     ],
-    imageUrl: "/Services/Market-Expansion.jpg",
-    icon: "/Services/market.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735575010/RSAY%20Images/Mobile_Application_Development/lhn9rgnxabvui9yumyc8.png",
   },
 ];

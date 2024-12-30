@@ -14,7 +14,7 @@ export default function Page() {
       <div className="absolute h-[40rem] w-full -z-10 ">
         <div className="absolute top-0 w-full h-[40rem] bg-black/70 "></div>
         <Image
-          src="/Services/training.jpeg"
+          src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735572633/RSAY%20Images/Training_Courses/vz0c8kzaabxgspvaxy7z.jpg"
           width={1920}
           height={1080}
           alt="bg"

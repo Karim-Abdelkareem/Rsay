@@ -1,7 +1,7 @@
 [
   {
     "title": "RSAY's training Courses",
-    "icon": "/Home/online-learning.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735578983/RSAY%20Images/Home/jhybtts0frpec0sswi15.png",
     "href": "/services/training-courses",
     "overview": "RSAY courses overview",
     "details": "At RSAY ITC, we specialize in delivering peer-to-peer (P2P) training across all facets of information technology. From safeguarding digital landscapes to developing innovative solutions, optimizing infrastructure, and analyzing data-driven insights, our programs empower individuals and organizations to master the complexities of the modern IT world.Partner with RSAY ITC for unparalleled training that drives success in the ever-evolving tech industry.",
@@ -29,7 +29,7 @@
   },
   {
     "title": "Website Development",
-    "icon": "/Home/web-development.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735578984/RSAY%20Images/Home/ykogq4v8uy25f0ixfmxg.png",
     "href": "/services/website-development",
     "overview": "Our website development service focuses on designing and building digital platforms that represent your brand’s identity and reflect your vision. A website is more than just a digital presence—it’s a powerful tool for engaging customers, promoting products, and delivering services. ",
     "details": "We create professional, user-friendly websites that enhance your online presence and support business growth by offering optimized performance and seamless user experiences.",
@@ -109,7 +109,7 @@
   },
   {
     "title": "Mobile Application Development (Android & iOS)",
-    "icon": "/Home/mobile-development.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735578982/RSAY%20Images/Home/bcxkoyq3rkc6pbkaf8ik.png",
     "href": "/services/mobile-application",
     "overview": "In today’s world, where smartphones have become essential tools for everyday life, having a mobile application is crucial for businesses to connect with their customers and offer services seamlessly.",
     "details": "At RSAY Information Technology, we specialize in developing custom mobile applications for Android and iOS, tailored to meet your needs and drive your business forward.",
@@ -187,7 +187,7 @@
   },
   {
     "title": "RSAY Integrated Learning Management System (LMS)",
-    "icon": "/Home/learning.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735578981/RSAY%20Images/Home/twc78ofqiqfkqdaflm3m.png",
     "href": "/services/lms",
     "overview": "Our LMS is a comprehensive digital learning solution designed to help organizations create, manage, and deliver training programs efficiently. It provides a flexible learning environment that supports both self-paced and live training sessions, enabling organizations to enhance employee skills and offer high-quality educational experiences.",
     "details": "Our LMS is a comprehensive digital learning solution designed to help organizations create, manage, and deliver training programs efficiently. It provides a flexible learning environment that supports both self-paced and live training sessions, enabling organizations to enhance employee skills and offer high-quality educational experiences.",

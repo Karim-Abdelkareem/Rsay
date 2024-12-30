@@ -88,7 +88,7 @@ export default function Page() {
       <div className="absolute w-full h-[40rem] -z-10">
         <div className="absolute top-0 w-full h-[40rem] bg-black/60"></div>
         <Image
-          src="/Contact/univeristies.png"
+          src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569203/RSAY%20Images/lz3hxftd544cqwt34ixl.png"
           width={1920}
           height={1080}
           alt="bg"
@@ -109,9 +109,7 @@ export default function Page() {
       <div ref={partneringRef}>
         <motion.div {...motionSettingsPartnering}>
           <h2
-            className={`text-3xl md:text-5xl font-bold font-brush text-center ${
-              locale === "en" ? "-rotate-3" : ""
-            } mb-8 md:w-[50%] mx-auto`}
+            className={`text-3xl md:text-5xl font-bold font-brush text-center mb-8 md:w-[50%] mx-auto`}
           >
             {t("why")}
           </h2>
@@ -139,7 +137,7 @@ export default function Page() {
           <div className="order-1 md:order-2">
             <motion.div {...motionSettingsCollaboratingImage}>
               <Image
-                src="/Contact/collaboration.jpg"
+                src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735569224/RSAY%20Images/twsh2y4sbjheo9lq4me1.jpg"
                 alt="coll"
                 width={800}
                 height={800}

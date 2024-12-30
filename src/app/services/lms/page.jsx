@@ -29,7 +29,7 @@ export default function Page() {
       <div className="absolute h-screen md:h-[35rem] w-full -z-10 ">
         <div className="absolute top-0 w-full h-screen md:h-[35rem] bg-black/70 "></div>
         <Image
-          src="/Services/LMS.jpeg"
+          src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573697/RSAY%20Images/LMS/wr4zv0varxf17cpcqw8g.jpg"
           width={1920}
           height={1080}
           alt="bg"
@@ -124,7 +124,7 @@ export default function Page() {
             {t("lms-why")}
           </p>
           <Image
-            src="/Services/why.png"
+            src="https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735574172/RSAY%20Images/LMS/dewuruzotycje6a5yrnj.png"
             alt=""
             width={400}
             height={400}
@@ -138,7 +138,7 @@ export default function Page() {
 const benefits = [
   {
     title: "Easy Course Management",
-    icon: "/Services/LMS/exam.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573471/RSAY%20Images/LMS/lhla0enrp4fy9xyirmye.png",
     description: [
       "Create and manage courses with diverse content, including text, videos, and presentations.",
       "Organize content into structured modules and lessons for a seamless learning experience.",
@@ -146,7 +146,7 @@ const benefits = [
   },
   {
     title: "Support for Self-paced and Live Training",
-    icon: "/Services/LMS/self-confidence.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/tru91c94xztavxp0jml3.png",
     description: [
       "Offer flexible learning paths tailored to the schedules of individual learners.",
       "Integrate with platforms like Zoom and Microsoft Teams for live training sessions.",
@@ -154,7 +154,7 @@ const benefits = [
   },
   {
     title: "Varied Assessments and Evaluations",
-    icon: "/Services/LMS/research.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/rqywkwu2apzunfmfq9a0.png",
     description: [
       "Create multiple assessment types, such as quizzes, essays, and multiple-choice questions.",
       "Provide automated grading with instant feedback to help learners improve their performance.",
@@ -162,7 +162,7 @@ const benefits = [
   },
   {
     title: "Automated Certificate Issuance",
-    icon: "/Services/LMS/certificate.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573464/RSAY%20Images/LMS/ra77qx369vlhzm4rplql.png",
     description: [
       "Generate certificates automatically upon course completion.",
       "Customize certificates with the organization’s logo and course details to enhance brand identity.",
@@ -170,7 +170,7 @@ const benefits = [
   },
   {
     title: "Effective Student and Trainee Management",
-    icon: "/Services/LMS/skills.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/ce2cfliukvwxd8ippsoa.png",
     description: [
       "Use a comprehensive dashboard to manage and track learner progress.",
       "Assign different roles and permissions (e.g., instructor, trainee, administrator).",
@@ -178,7 +178,7 @@ const benefits = [
   },
   {
     title: "Payment and Subscription Management",
-    icon: "/Services/LMS/subscription-business-model.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/wchgwg7de351osmpmkoi.png",
     description: [
       "Sell courses through integrated payment gateways.",
       "Offer subscription models or one-time payment plans to suit client needs.",
@@ -186,7 +186,7 @@ const benefits = [
   },
   {
     title: "Flexible and Responsive User Interface",
-    icon: "/Services/LMS/responsive.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573478/RSAY%20Images/LMS/ozlhl1vkqgw6gkgnvw9b.png",
     description: [
       "Provide an easy-to-use interface compatible with all devices (desktop, mobile, tablet).",
       "Support both Arabic and English to cater to diverse user needs.",
@@ -194,7 +194,7 @@ const benefits = [
   },
   {
     title: "Advanced Analytics and Reporting",
-    icon: "/Services/LMS/monitor.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573473/RSAY%20Images/LMS/ozef9ggulkezajnxt6ti.png",
     description: [
       "Generate detailed reports on learner performance and course completion rates.",
       "Provide insights to support data-driven educational decisions.",
@@ -202,7 +202,7 @@ const benefits = [
   },
   {
     title: "Integration with Other Systems",
-    icon: "/Services/LMS/integration.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573477/RSAY%20Images/LMS/eqazdc81w1kdjpbtjqy7.png",
     description: [
       "Integrate with HR systems and marketing platforms to streamline operations.",
       "Offer APIs to ensure seamless connection with external tools.",
@@ -210,7 +210,7 @@ const benefits = [
   },
   {
     title: "Interactive Learning Environment",
-    icon: "/Services/LMS/learning (1).png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573472/RSAY%20Images/LMS/yxf79o8ybohedscjhtvp.png",
     description: [
       "Facilitate discussion forums to promote engagement among learners.",
       "Send notifications and messages to encourage continuous participation.",
@@ -225,7 +225,7 @@ const benefitsAr = [
       "إنشاء وإدارة دورات تدريبية باستخدام محتويات متنوعة مثل النصوص، الفيديوهات، والعروض التقديمية.",
       "تنظيم المحتوى في وحدات متسلسلة ودروس لضمان تجربة تعليمية مترابطة.",
     ],
-    icon: "/Services/LMS/exam.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573471/RSAY%20Images/LMS/lhla0enrp4fy9xyirmye.png",
   },
   {
     title: "دعم التعلم الذاتي والجلسات الحية",
@@ -233,7 +233,7 @@ const benefitsAr = [
       "إمكانية إنشاء مسارات تعليمية ذاتية وفق جداول مرنة تتناسب مع كل متدرب.",
       "التكامل مع أدوات البث الحي مثل Zoom وTeams لإدارة جلسات تدريب مباشرة.",
     ],
-    icon: "/Services/LMS/self-confidence.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/tru91c94xztavxp0jml3.png",
   },
   {
     title: "إنشاء اختبارات وتقييمات متنوعة",
@@ -241,7 +241,7 @@ const benefitsAr = [
       "دعم أنواع متعددة من التقييمات مثل الاختبارات الاختيارية والأسئلة المقالية.",
       "التصحيح الآلي مع تقديم تغذية راجعة فورية للمتعلمين لتحسين الأداء.",
     ],
-    icon: "/Services/LMS/research.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/rqywkwu2apzunfmfq9a0.png",
   },
   {
     title: "إصدار شهادات مخصصة",
@@ -249,7 +249,7 @@ const benefitsAr = [
       "إنشاء شهادات تلقائيًا عند إتمام الدورات بنجاح.",
       "تخصيص الشهادات بشعار المؤسسة وبيانات الدورة لتعزيز هوية المؤسسة.",
     ],
-    icon: "/Services/LMS/certificate.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573464/RSAY%20Images/LMS/ra77qx369vlhzm4rplql.png",
   },
   {
     title: "إدارة فعالة للطلاب والمتدربين",
@@ -257,7 +257,7 @@ const benefitsAr = [
       "لوحة تحكم شاملة لتسجيل المتدربين ومتابعة أدائهم.",
       "تخصيص أدوار وصلاحيات مختلفة (مثل مدرب، متدرب، مشرف).",
     ],
-    icon: "/Services/LMS/skills.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/ce2cfliukvwxd8ippsoa.png",
   },
   {
     title: "دعم المدفوعات والاشتراكات",
@@ -265,7 +265,7 @@ const benefitsAr = [
       "تمكين بيع الدورات التدريبية من خلال بوابات دفع إلكترونية.",
       "تقديم خطط اشتراك شهرية أو مدفوعة حسب احتياجات العملاء.",
     ],
-    icon: "/Services/LMS/subscription-business-model.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/wchgwg7de351osmpmkoi.png",
   },
   {
     title: "واجهة مستخدم مرنة ومتجاوبة",
@@ -273,7 +273,7 @@ const benefitsAr = [
       "تصميم واجهة سهلة الاستخدام ومتوافقة مع جميع الأجهزة (حاسب، هاتف، جهاز لوحي).",
       "دعم اللغة العربية والإنجليزية لتلبية احتياجات جميع المستخدمين.",
     ],
-    icon: "/Services/LMS/responsive.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573478/RSAY%20Images/LMS/ozlhl1vkqgw6gkgnvw9b.png",
   },
   {
     title: "تحليلات وتقارير متقدمة",
@@ -281,7 +281,7 @@ const benefitsAr = [
       "تقديم تقارير دقيقة عن أداء المتدربين ونسب إتمام الدورات.",
       "إحصائيات شاملة تساعد في اتخاذ قرارات تعليمية مدروسة.",
     ],
-    icon: "/Services/LMS/monitor.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573473/RSAY%20Images/LMS/ozef9ggulkezajnxt6ti.png",
   },
   {
     title: "تكامل مع الأنظمة الأخرى",
@@ -289,7 +289,7 @@ const benefitsAr = [
       "إمكانية الربط مع أنظمة إدارة الموارد البشرية والتسويق.",
       "توفير واجهات برمجية (APIs) لتكامل سهل مع الأنظمة الأخرى.",
     ],
-    icon: "/Services/LMS/integration.png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573477/RSAY%20Images/LMS/eqazdc81w1kdjpbtjqy7.png",
   },
   {
     title: "دعم التفاعل والمجتمع التعليمي",
@@ -297,6 +297,6 @@ const benefitsAr = [
       "إنشاء منتديات نقاش لتعزيز التواصل بين المتدربين.",
       "إرسال إشعارات ورسائل لتحفيز التفاعل المستمر.",
     ],
-    icon: "/Services/LMS/learning (1).png",
+    icon: "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573472/RSAY%20Images/LMS/yxf79o8ybohedscjhtvp.png",
   },
 ];

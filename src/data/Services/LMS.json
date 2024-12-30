@@ -1,32 +1,32 @@
 [
   {
     "name": "Enhanced Learning Outcomes",
-    "imageUrl": "/Services/LMS/outcome.png",
-    "icon": "/Services/LMS/exam.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573490/RSAY%20Images/LMS/xbloqjx9nwagcqjsqktj.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573471/RSAY%20Images/LMS/lhla0enrp4fy9xyirmye.png",
     "description": "Helps organizations deliver high-quality training programs that drive continuous skill development."
   },
   {
     "name": "Boosted Productivity",
-    "imageUrl": "/Services/LMS/boosted.png",
-    "icon": "/Services/LMS/efficiency.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573479/RSAY%20Images/LMS/uohz4rahfty6y39ng8z5.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573469/RSAY%20Images/LMS/s6slsv4oekwsfvwltybk.png",
     "description": "Enables flexible training without disrupting daily operations."
   },
   {
     "name": "Digital Transformation",
-    "imageUrl": "/Services/LMS/transformation.png",
-    "icon": "/Services/LMS/data-transformation.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573480/RSAY%20Images/LMS/b9tknlwbvlem3dxbtmoj.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573469/RSAY%20Images/LMS/iq73vubawbybtoqrxbru.png",
     "description": "Supports the shift to digital learning for more efficient training processes."
   },
   {
     "name": "Cost Efficiency",
-    "imageUrl": "/Services/LMS/cost.png",
-    "icon": "/Services/LMS/efficiency (1).png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573478/RSAY%20Images/LMS/pb1ua3dflvtzitcz9pos.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573468/RSAY%20Images/LMS/erhxkbhqkdvjdiegyl0e.png",
     "description": "Reduces reliance on traditional in-person training, saving time and resources."
   },
   {
     "name": "Increased Engagement",
-    "imageUrl": "/Services/LMS/engagement.png",
-    "icon": "/Services/LMS/interaction.png",
+    "imageUrl": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573497/RSAY%20Images/LMS/di14duwdv29wspdw36l2.png",
+    "icon": "https://res.cloudinary.com/dqiwqlu8v/image/upload/v1735573476/RSAY%20Images/LMS/vaen4hva5nwx5df9rb63.png",
     "description": "Fosters interaction through discussion forums and real-time notifications, improving learner participation."
   }
 ]
