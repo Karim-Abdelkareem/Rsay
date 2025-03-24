@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.rsaay.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.rsaay.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en/about"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rsaay.com/services/website-development</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar/services/website-development"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en/services/website-development"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rsaay.com/services/mobile-application</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar/services/mobile-application"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en/services/mobile-application"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rsaay.com/services/lms</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar/services/lms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en/services/lms"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rsaay.com/services/training-courses</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar/services/training-courses"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en/services/training-courses"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rsaay.com/contact/companies</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar/contact/companies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en/contact/companies"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.rsaay.com/contact/universities</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.rsaay.com/ar/contact/universities"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rsaay.com/en/contact/universities"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset> 
